@@ -1,0 +1,16 @@
+:root {
+    --base-100: #000000;
+    --base-200: rgba(255, 255, 255, 0.1);
+
+    --base-content-100: #fff;
+    --base-content-200: rgba(255, 255, 255, 0.6);
+
+    --green-100: #00FF5F;
+    --orange-100: #FF4310;
+    
+    --font-family-first: "Helvetica Neue", sans-serif;
+    --font-family-second: "Inter", sans-serif;
+    --font-family-third: "Druk Wide Cyr", sans-serif;
+    --font-family-fourth: "Akira Expanded", sans-serif;
+    --font-family-fifth: "TT Travels", sans-serif;
+}

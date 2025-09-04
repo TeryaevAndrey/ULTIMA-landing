@@ -1,0 +1,108 @@
+.card {
+  padding: 40px;
+  border-radius: 60px;
+  background: linear-gradient(
+    360deg,
+    rgba(5, 5, 5, 0.8) 0%,
+    rgba(5, 5, 5, 0.8) 100%
+  );
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 640px;
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.card__advantages {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.card__advantage {
+    background-color: var(--base-200);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__content {
+  margin-top: 90px;
+  z-index: 2;
+  position: relative;
+}
+
+.card__title {
+  font-family: var(--font-family-third);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 120%;
+  background: linear-gradient(90deg, #fff 0%, #5b6468 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 80px;
+}
+
+.card__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    max-width: 1040px;
+    width: 100%;
+}
+
+.card__footer {
+    display: flex;
+    align-items: end;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.card__parameters {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__parameter {
+    list-style: disc;
+}
+
+.card__parameter::marker {
+    color: var(--green-100);
+}
+
+@media (max-width: 1024px) {
+  .card {
+    padding: 30px;
+    border-radius: 60px;
+  }
+
+  .card__content {
+    margin-top: 34px;
+  }
+}

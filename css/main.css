@@ -1,0 +1,81 @@
+@import "./reset.css";
+@import "./fonts.css";
+@import "./variables.css";
+@import "./button.css";
+@import "./input.css";
+@import "./header.css";
+@import "./hero.css";
+@import "./services.css";
+@import "./card.css";
+@import "./footer.css";
+@import "./callback-form.css";
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background-color: var(--base-100);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;  
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family-fourth);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: var(--base-content-100);
+}
+
+.language-button {
+  width: 68px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--base-200);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--base-content-100);
+  border-radius: 20px;
+  padding: 24px;
+  transition: all 0.2s ease;
+}
+
+.language-button:hover {
+  opacity: 0.8;
+}
+
+.language-button:active {
+  scale: 0.95;
+}
+
+.started {
+  height: 200svh;
+  position: relative;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--base-content-100);
+}
+
+@media(max-width: 1024px) {
+  .container {
+    padding: 0 10px;
+  }
+}

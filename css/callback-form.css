@@ -1,0 +1,15 @@
+.callback-form {
+    max-width: 570px;
+    width: 100%;
+}
+
+.callback-form__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.callback-form__button {
+    margin-top: 20px;
+    width: 100%;
+}

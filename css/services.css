@@ -1,0 +1,39 @@
+.services {
+    margin-top: 76px;
+}
+
+.services__navbar {
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+}
+
+.services__navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.services__navs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card:first-child {
+    position: sticky;
+    top: 120px;
+}
+
+.card:nth-child(2) {
+    position: sticky;
+    top: 250px
+}
+
+@media (max-width: 1024px) {
+  .services__navbar-inner {
+    flex-direction: column;
+    justify-content: start;
+  }
+}
