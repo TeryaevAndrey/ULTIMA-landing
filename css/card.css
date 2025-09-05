@@ -1,16 +1,30 @@
 .card {
   padding: 40px;
   border-radius: 60px;
-  background: linear-gradient(
-    360deg,
-    rgba(5, 5, 5, 0.8) 0%,
-    rgba(5, 5, 5, 0.8) 100%
-  );
+  background-color: var(--base-100);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 640px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(
+    360deg,
+    rgba(5, 5, 5, 0.8) 0%,
+    rgba(5, 5, 5, 0.8) 100%
+  );
+  filter: blur(20px);
+  z-index: 0;
 }
 
 .card__header {
@@ -29,17 +43,19 @@
 }
 
 .card__advantage {
-    background-color: var(--base-200);
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--base-200);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 20px;
 }
 
 .card__content {
   margin-top: 90px;
-  z-index: 2;
+  z-index: 5;
   position: relative;
 }
 
@@ -55,45 +71,125 @@
   margin-bottom: 80px;
 }
 
+.card.orange-card::before {
+  background: linear-gradient(180deg, #131313 0%, #000 100%);
+  filter: blur(0);
+}
+
+.card.orange-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    360deg,
+    rgba(255, 123, 34, 0.12) 0%,
+    rgba(255, 123, 34, 0.08) 100%
+  );
+  height: 20%;
+  filter: blur(30px);
+  z-index: 5;
+}
+
+.orange-card .card__title {
+  background: linear-gradient(61deg, #fff 0%, #ff5f20 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .card__bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: cover;
-    object-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__image {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    max-width: 1040px;
-    width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  max-width: 1040px;
+  width: 100%;
+}
+
+.card:nth-child(2) .card__image {
+  max-width: 651px;
+}
+
+.card:nth-child(3) .card__image {
+  max-width: 950px;
 }
 
 .card__footer {
-    display: flex;
-    align-items: end;
-    gap: 60px;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  align-items: end;
+  gap: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.card__footer-button.button {
+  height: 60px;
 }
 
 .card__parameters {
-    display: flex;
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 825px;
+  width: 100%;
+  column-gap: 60px;
 }
 
 .card__parameter {
-    list-style: disc;
+  list-style: disc;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .card__parameter::marker {
-    color: var(--green-100);
+  color: var(--green-100);
+}
+
+.card {
+  position: sticky;
+  top: 80px; /* базовое прилипающее смещение */
+}
+.card:nth-child(2) {
+  top: 200px;
+}
+.card:nth-child(3) {
+  top: 320px;
+}
+.card:nth-child(4) {
+  top: 440px;
+}
+
+.card__footer-description {
+  font-family: var(--font-family-third);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 120%;
+  background: linear-gradient(90deg, #fff 0%, #5b6468 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card.orange-card .card__footer-description {
+  background: linear-gradient(61deg, #fff 0%, #ff5f20 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 1024px) {
@@ -104,5 +200,44 @@
 
   .card__content {
     margin-top: 34px;
+  }
+}
+
+@media (min-width: 900px) and (max-height: 768px) {
+  .card {
+    height: 400px;
+  }
+
+  .card__title {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .card__content {
+    margin-top: 28px;
+  }
+
+  .card__parameters {
+    row-gap: 16px;
+  }
+
+  .card__footer-description {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 900px) and (max-height: 1000px) {
+  .card {
+    position: sticky;
+    top: 80px; /* базовое прилипающее смещение */
+  }
+  .card:nth-child(2) {
+    top: 120px;
+  }
+  .card:nth-child(3) {
+    top: 160px;
+  }
+  .card:nth-child(4) {
+    top: 200px;
   }
 }

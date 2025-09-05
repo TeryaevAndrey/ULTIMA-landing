@@ -30,7 +30,10 @@
                 Готовые технические решения для заработка в Hight Risk
               </h1>
               <p class="hero__description">для заработка в Hight Risk</p>
-              <button class="hero__button button primary">
+              <button
+                class="hero__button button primary"
+                onclick="scrollToBlock(event, 'footer')"
+              >
                 Связаться с нами
               </button>
             </div>
@@ -38,27 +41,46 @@
         </div>
       </section>
       <section class="services">
+        <div class="services__fill"></div>
         <div class="container">
           <div class="services__navbar">
             <div class="services__navbar-inner">
               <h2 class="section-title">Сервисы</h2>
               <div class="services__navs">
-                <a class="services__nav button primary" href="#">
+                <a
+                  class="services__nav button primary active"
+                  href="#card-1"
+                  onclick="scrollToCard(0)"
+                >
                   Агрегатор трафика
                 </a>
-                <a class="services__nav button primary" href="#">
+                <a
+                  class="services__nav button primary"
+                  href="#card-2"
+                  onclick="scrollToCard(1)"
+                >
                   P2P Платформа
                 </a>
-                <a class="services__nav button primary" href="#">
+                <a
+                  class="services__nav button primary"
+                  href="#card-3"
+                  onclick="scrollToCard(2)"
+                >
                   Крипто-обменник
                 </a>
-                <a class="services__nav button primary" href="#"> Под ключ </a>
+                <a
+                  class="services__nav button primary"
+                  href="#card-4"
+                  onclick="scrollToCard(3)"
+                >
+                  Под ключ
+                </a>
               </div>
             </div>
           </div>
           <div class="services__container">
             <div class="services__list">
-              <div class="card">
+              <div class="card" id="card-1">
                 <picture class="card__bg">
                   <source
                     srcset="./assets/images/card-1-bg.webp"
@@ -101,26 +123,25 @@
 
                 <div class="card__footer">
                   <p class="card__footer-description">Запуск за 7 дней</p>
-                  <button class="button primary">Связаться с нами</button>
+                  <button
+                    class="card__footer-button button primary"
+                    onclick="scrollToBlock(event, 'footer')"
+                  >
+                    Связаться с нами
+                  </button>
                 </div>
               </div>
-              <div class="card">
-                <picture class="card__bg">
-                  <source
-                    srcset="./assets/images/card-1-bg.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="./assets/images/card-1-bg.png"
-                    type="image/png"
-                  />
-                  <img src="./assets/images/card-1-bg.png" alt="Card-1" />
-                </picture>
+              <div class="card orange-card" id="card-2">
+                <object
+                  class="card__bg"
+                  data="./assets/images/card-2-bg.svg"
+                  type="image/svg+xml"
+                ></object>
 
                 <picture class="card__image">
-                  <source srcset="./assets/images/card-1.webp" />
-                  <source srcset="./assets/images/card-1.png" />
-                  <img src="./assets/images/card-1.png" alt="Card-1.1" />
+                  <source srcset="./assets/images/card-2.webp" />
+                  <source srcset="./assets/images/card-2.png" />
+                  <img src="./assets/images/card-2.png" alt="Card-2" />
                 </picture>
 
                 <div class="card__header">
@@ -131,122 +152,205 @@
                 </div>
 
                 <div class="card__content">
-                  <h4 class="card__title">Агрегатор трафика</h4>
+                  <h4 class="card__title">Процессинговая платформа P2P</h4>
 
                   <ul class="card__parameters">
                     <li class="card__parameter">
-                      Гибкая маршрутизация между провайдерами
+                      Прием и вывод средств по всему миру
                     </li>
                     <li class="card__parameter">
-                      Мультивалютность и глобальный охват
+                      Риал-тайм статистика и антифрод защита
                     </li>
-                    <li class="card__parameter">Риал-тайм аналитика</li>
-                    <li class="card__parameter">Полностью автоматизирован</li>
+                    <li class="card__parameter">Кастомизируемый интерфейс</li>
+                    <li class="card__parameter">
+                      Автоматика с высокой конверсия (SMSHUB)
+                    </li>
+
+                    <li class="card__parameter">
+                      Интеграция с крипто-кошельками
+                    </li>
+                    <li class="card__parameter">Telegram-инфраструктура</li>
+                    <li class="card__parameter">
+                      Рейтинговая система трейдеров
+                    </li>
+                    <li class="card__parameter">
+                      Гибкая настройка реквизитов (фермы/заливы/бт/кт)
+                    </li>
                   </ul>
                 </div>
 
                 <div class="card__footer">
                   <p class="card__footer-description">Запуск за 7 дней</p>
-                  <button class="button primary">Связаться с нами</button>
+                  <button
+                    class="card__footer-button button primary"
+                    onclick="scrollToBlock(event, 'footer')"
+                  >
+                    Связаться с нами
+                  </button>
                 </div>
               </div>
-              <div class="card">
+              <div class="card" id="card-3">
                 <picture class="card__bg">
                   <source
-                    srcset="./assets/images/card-1-bg.webp"
+                    srcset="./assets/images/card-3-bg.webp"
                     type="image/webp"
                   />
                   <source
-                    srcset="./assets/images/card-1-bg.png"
+                    srcset="./assets/images/card-3-bg.png"
                     type="image/png"
                   />
-                  <img src="./assets/images/card-1-bg.png" alt="Card-1" />
+                  <img src="./assets/images/card-3-bg.png" alt="Card-3" />
                 </picture>
 
                 <picture class="card__image">
-                  <source srcset="./assets/images/card-1.webp" />
-                  <source srcset="./assets/images/card-1.png" />
-                  <img src="./assets/images/card-1.png" alt="Card-1.1" />
+                  <source srcset="./assets/images/card-3.webp" />
+                  <source srcset="./assets/images/card-3.png" />
+                  <img src="./assets/images/card-3.png" alt="Card-3.1" />
                 </picture>
 
                 <div class="card__header">
                   <div class="card__advantages">
                     <div class="card__advantage">White Label</div>
-                    <div class="card__advantage">ПРОДАЖА КОДА</div>
+                    <p class="card__header-description">
+                      Обмен криптовалют с интуитивным UX
+                    </p>
                   </div>
                 </div>
 
                 <div class="card__content">
-                  <h4 class="card__title">Агрегатор трафика</h4>
+                  <h4 class="card__title">Crypto Exchange (Web + Tg-Bot)</h4>
 
                   <ul class="card__parameters">
                     <li class="card__parameter">
-                      Гибкая маршрутизация между провайдерами
+                      Мгновенный расчет курса через калькулятор
                     </li>
                     <li class="card__parameter">
-                      Мультивалютность и глобальный охват
+                      Telegram-бот с оформлением заявок в чате
                     </li>
-                    <li class="card__parameter">Риал-тайм аналитика</li>
-                    <li class="card__parameter">Полностью автоматизирован</li>
+                    <li class="card__parameter">
+                      Автоматическая или полуавтоматическая обработка
+                    </li>
+                    <li class="card__parameter">
+                      Уведомления на email, Telegram, push
+                    </li>
+                    <li class="card__parameter">
+                      Мультивалютность и кастомные направления
+                    </li>
+                    <li class="card__parameter">
+                      Интеграция с API криптокошельков
+                    </li>
                   </ul>
                 </div>
 
                 <div class="card__footer">
                   <p class="card__footer-description">Запуск за 7 дней</p>
-                  <button class="button primary">Связаться с нами</button>
+                  <button
+                    class="card__footer-button button primary"
+                    onclick="scrollToBlock(event, 'footer')"
+                  >
+                    Связаться с нами
+                  </button>
+                </div>
+              </div>
+              <div class="card orange-card" id="card-4">
+                <picture class="card__bg">
+                  <source
+                    srcset="./assets/images/card-4-bg.webp"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="./assets/images/card-4-bg.png"
+                    type="image/png"
+                  />
+                  <img src="./assets/images/card-4-bg.png" alt="Card-4" />
+                </picture>
+
+                <div class="card__header">
+                  <div class="card__advantages">
+                    <div class="card__advantage">РАЗРАБОТКА НА ЗАКАЗ</div>
+                  </div>
+                </div>
+
+                <div class="card__content">
+                  <h4 class="card__title">
+                    Ваш проект: от концепции до запуска — быстро и без лишних
+                    вопросов
+                  </h4>
+                </div>
+
+                <div class="card__footer">
+                  <p class="card__footer-description--small">
+                    Сфокусируйтесь на бизнесе, а мы возьмем на себя всё
+                    техническое
+                  </p>
+                  <button
+                    class="card__footer-button button primary"
+                    onclick="scrollToBlock(event, 'footer')"
+                  >
+                    Связаться с нами
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <footer class="footer" id="footer">
+          <div class="container">
+            <div class="footer__inner">
+              <div class="footer__content">
+                <h2 class="footer__title">Остались вопросы или хотите демо?</h2>
+                <p class="footer__description">
+                  Свяжитесь с нами — мы подскажем, покажем и запустим ваш
+                  продукт
+                </p>
+                <a class="footer__tg" href="#">
+                  Перейти в телеграм канал
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M26.583 0C31.3286 0 33.7017 0.000326821 35.5078 0.938477C37.0298 1.72911 38.2709 2.97016 39.0615 4.49219C39.9997 6.29832 40 8.67136 40 13.417V26.583C40 31.3286 39.9997 33.7017 39.0615 35.5078C38.2709 37.0298 37.0298 38.2709 35.5078 39.0615C33.7017 39.9997 31.3286 40 26.583 40H13.417C8.67136 40 6.29832 39.9997 4.49219 39.0615C2.97016 38.2709 1.72911 37.0298 0.938477 35.5078C0.000326821 33.7017 0 31.3286 0 26.583V13.417C0 8.67136 0.000326886 6.29832 0.938477 4.49219C1.72911 2.97016 2.97016 1.72911 4.49219 0.938477C6.29832 0.000326886 8.67136 0 13.417 0H26.583ZM32.2842 11.3027C32.7041 9.6194 31.6419 8.8553 30.542 9.35449L6.46094 18.6436C4.81731 19.303 4.82684 20.2191 6.16113 20.6279L12.167 22.5029L14.4648 29.5488C14.7442 30.32 14.6072 30.626 15.417 30.626C16.0416 30.6259 16.319 30.3409 16.667 30.001C16.8883 29.7844 18.2026 28.5067 19.6699 27.0801L25.917 31.6953C27.0666 32.3295 27.8973 32.0013 28.1836 30.6279L32.2842 11.3027ZM26.6475 13.5312C27.3231 13.1215 27.9425 13.3416 27.4346 13.793L15.8418 24.252L15.3906 29.0664L13.1094 22.0723L26.6475 13.5312Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <form class="callback-form">
+                <div class="callback-form__inputs">
+                  <input class="input primary" placeholder="Имя" name="name" />
+                  <input
+                    class="input primary"
+                    placeholder="Телефон"
+                    type="tel"
+                    name="tel"
+                  />
+                  <input
+                    class="input primary"
+                    placeholder="Почта или телеграм"
+                    name="email"
+                  />
+                </div>
+                <button
+                  class="callback-form__button button primary"
+                type="submit"
+                >
+                  Связаться с нами
+                </button>
+              </form>
+            </div>
+            <p class="footer__big-text">ULTIMA<sup>®</sup></p>
+          </div>
+        </footer>
       </section>
     </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__content">
-            <h2 class="footer__title">Остались вопросы или хотите демо?</h2>
-            <p class="footer__description">
-              Свяжитесь с нами — мы подскажем, покажем и запустим ваш продукт
-            </p>
-            <a class="footer__tg" href="#">
-              Перейти в телеграм канал
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 40 40"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M26.583 0C31.3286 0 33.7017 0.000326821 35.5078 0.938477C37.0298 1.72911 38.2709 2.97016 39.0615 4.49219C39.9997 6.29832 40 8.67136 40 13.417V26.583C40 31.3286 39.9997 33.7017 39.0615 35.5078C38.2709 37.0298 37.0298 38.2709 35.5078 39.0615C33.7017 39.9997 31.3286 40 26.583 40H13.417C8.67136 40 6.29832 39.9997 4.49219 39.0615C2.97016 38.2709 1.72911 37.0298 0.938477 35.5078C0.000326821 33.7017 0 31.3286 0 26.583V13.417C0 8.67136 0.000326886 6.29832 0.938477 4.49219C1.72911 2.97016 2.97016 1.72911 4.49219 0.938477C6.29832 0.000326886 8.67136 0 13.417 0H26.583ZM32.2842 11.3027C32.7041 9.6194 31.6419 8.8553 30.542 9.35449L6.46094 18.6436C4.81731 19.303 4.82684 20.2191 6.16113 20.6279L12.167 22.5029L14.4648 29.5488C14.7442 30.32 14.6072 30.626 15.417 30.626C16.0416 30.6259 16.319 30.3409 16.667 30.001C16.8883 29.7844 18.2026 28.5067 19.6699 27.0801L25.917 31.6953C27.0666 32.3295 27.8973 32.0013 28.1836 30.6279L32.2842 11.3027ZM26.6475 13.5312C27.3231 13.1215 27.9425 13.3416 27.4346 13.793L15.8418 24.252L15.3906 29.0664L13.1094 22.0723L26.6475 13.5312Z"
-                  fill="white"
-                />
-              </svg>
-            </a>
-          </div>
-          <form class="callback-form">
-            <div class="callback-form__inputs">
-              <input class="input primary" placeholder="Имя" name="name" />
-              <input
-                class="input primary"
-                placeholder="Телефон"
-                type="tel"
-                name="tel"
-              />
-              <input
-                class="input primary"
-                placeholder="Почта или телеграм"
-                name="email"
-              />
-            </div>
-            <button class="callback-form__button button primary">
-              Связаться с нами
-            </button>
-          </form>
-        </div>
-        <p class="footer__big-text">ULTIMA<sup>®</sup></p>
-      </div>
-    </footer>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/cards.js"></script>
+    <script src="./js/languages.js"></script>
   </body>
 </html>

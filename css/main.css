@@ -10,6 +10,10 @@
 @import "./footer.css";
 @import "./callback-form.css";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Helvetica Neue", sans-serif;
   font-size: 16px;

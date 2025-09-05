@@ -1,0 +1,18 @@
+{
+  "ru": {
+    "title": "Привет, мир!",
+    "description": "Это мой сайт.",
+    "contact": "Связаться с нами",
+    "name": "Имя",
+    "phone": "Телефон",
+    "email": "Почта или Telegram"
+  },
+  "en": {
+    "title": "Hello, world!",
+    "description": "This is my website.",
+    "contact": "Contact us",
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email or Telegram"
+  }
+}
