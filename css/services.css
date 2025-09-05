@@ -37,24 +37,19 @@
   gap: 8px;
 }
 
-.services__nav {
-  height: 50px;
-  padding: 20px 28px;
-  border-radius: 20px;
-  border: 1px solid transparent;
-}
-
 .services__nav.button {
   outline: none;
   backdrop-filter: unset;
   box-shadow: none;
   -webkit-backdrop-filter: unset;
-}
-
-.services__nav.button {
-  font-family: var(--font-family-first);
+  text-transform: none;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
+  height: 50px;
+  padding: 20px 28px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  min-width: 168px;
 }
 
 .services__nav.active {
