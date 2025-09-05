@@ -8,8 +8,17 @@
   font-weight: 400;
   color: var(--base-content-100);
   font-family: var(--font-family-second);
+  transition: all 0.2s ease;
 }
 
 .input.primary::placeholder {
   color: rgba(255, 255, 255, 0.4);
+}
+
+.input.primary:hover {
+  border-color: rgba(255, 67, 16, 0.3)
+}
+
+.input.primary:focus {
+  border-color: var(--orange-100)
 }

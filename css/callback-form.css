@@ -6,12 +6,19 @@
 .callback-form__inputs {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 .callback-form__button {
     margin-top: 20px;
     width: 100%;
+}
+
+.callback-form__button.button {
+    padding: 24px;
+      height: 60px;
+backdrop-filter: blur(0);
+font-weight: 400;
 }
 
 .callback-form__input {
