@@ -43,7 +43,7 @@
 }
 
 .card__advantage {
-  background-color: var(--base-200);
+  position: relative;
   border-radius: 20px;
   padding: 20px;
   display: flex;
@@ -51,6 +51,14 @@
   align-items: center;
   height: 50px;
   border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .card__content {
@@ -64,11 +72,29 @@
   font-size: 48px;
   font-weight: 500;
   line-height: 120%;
+  letter-spacing: 0.02em;
   background: linear-gradient(90deg, #fff 0%, #5b6468 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 80px;
+  width: 100%;
+}
+
+.card:first-child .card__title {
+  max-width: 402px;
+}
+
+.card:nth-child(2) .card__title {
+  max-width: 620px;
+}
+
+.card:nth-child(3) .card__title {
+  max-width: 720px;
+}
+
+.card:nth-child(4) .card__title {
+  max-width: 970px;
 }
 
 .card.orange-card::before {
@@ -139,6 +165,12 @@
   height: 60px;
 }
 
+.card.orange-card .card__footer-button.button {
+  background-color: rgba(255, 95, 32, 0.2);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
 .card__parameters {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -190,6 +222,10 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.card:first-child .card__parameters {
+  grid-template-columns: 1fr;
 }
 
 @media (max-width: 1024px) {

@@ -45,6 +45,13 @@
 }
 
 .services__nav.button {
+  outline: none;
+  backdrop-filter: unset;
+  box-shadow: none;
+  -webkit-backdrop-filter: unset;
+}
+
+.services__nav.button {
   font-family: var(--font-family-first);
   font-size: 14px;
   font-weight: 500;

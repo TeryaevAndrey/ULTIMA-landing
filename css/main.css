@@ -40,9 +40,17 @@ body {
   line-height: 120%;
   text-transform: uppercase;
   color: var(--base-content-100);
+  letter-spacing: -0.04em;
+}
+
+.logo sup {
+  font-size: 20px;
+  margin-top: -10px;
+  margin-left: -8px;
 }
 
 .language-button {
+  position: relative;
   width: 68px;
   height: 58px;
   display: flex;
@@ -56,6 +64,14 @@ body {
   border-radius: 20px;
   padding: 24px;
   transition: all 0.2s ease;
+  font-family: var(--font-family-second);
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  outline: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .language-button:hover {
