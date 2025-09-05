@@ -322,22 +322,35 @@
               </div>
               <form class="callback-form">
                 <div class="callback-form__inputs">
-                  <input class="input primary" placeholder="Имя" name="name" />
-                  <input
-                    class="input primary"
-                    placeholder="Телефон"
-                    type="tel"
-                    name="tel"
-                  />
-                  <input
-                    class="input primary"
-                    placeholder="Почта или телеграм"
-                    name="email"
-                  />
+                  <div class="form-control">
+                    <input
+                      class="callback-form__input input primary"
+                      placeholder="Имя"
+                      name="name"
+                    />
+                    <p class="form-error"></p>
+                  </div>
+                  <div class="form-control">
+                    <input
+                      class="callback-form__input input primary"
+                      placeholder="Телефон"
+                      type="tel"
+                      name="tel"
+                    />
+                    <p class="form-error"></p>
+                  </div>
+                  <div class="form-control">
+                    <input
+                      class="callback-form__input input primary"
+                      placeholder="Почта или телеграм"
+                      name="email"
+                    />
+                    <p class="form-error"></p>
+                  </div>
                 </div>
                 <button
                   class="callback-form__button button primary"
-                type="submit"
+                  type="submit"
                 >
                   Связаться с нами
                 </button>

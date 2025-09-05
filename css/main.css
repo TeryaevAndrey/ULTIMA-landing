@@ -24,7 +24,7 @@ body {
 
 .container {
   max-width: 1400px;
-  width: 100%;  
+  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
@@ -78,8 +78,26 @@ body {
   color: var(--base-content-100);
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   .container {
     padding: 0 10px;
+  }
+}
+
+.form-control {
+  width: 100%;
+}
+
+.form-error {
+  font-family: var(--font-family-second);
+  font-size: 14px;
+  font-weight: 400;
+  color: oklch(63.7% 0.237 25.331);
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .form-error {
+    font-size: 12px;
   }
 }

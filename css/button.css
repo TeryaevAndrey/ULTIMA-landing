@@ -5,6 +5,10 @@
     transition: all 0.2s ease;
 }
 
+.button:disabled {
+    opacity: 0.7;
+}
+
 .button:active {
     scale: 0.95;
 }
