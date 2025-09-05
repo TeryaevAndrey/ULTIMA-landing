@@ -81,7 +81,7 @@ function scrollToBlock(e, id) {
 
   const y = el.getBoundingClientRect().top + window.scrollY;
 
-  const offset = 300;
+  const offset = 150;
   window.scrollTo({
     top: y - offset,
     behavior: "smooth",

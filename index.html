@@ -26,13 +26,16 @@
               </div>
             </header>
             <div class="container hero__content">
-              <h1 class="hero__title">
+              <h1 class="hero__title" data-i18n="hero-title">
                 Готовые технические решения для заработка в Hight Risk
               </h1>
-              <p class="hero__description">для заработка в Hight Risk</p>
+              <p class="hero__description" data-i18n="hero-description">
+                для заработка в Hight Risk
+              </p>
               <button
                 class="hero__button button primary"
                 onclick="scrollToBlock(event, 'footer')"
+                data-i18n="contact-us"
               >
                 Связаться с нами
               </button>
@@ -45,12 +48,13 @@
         <div class="container">
           <div class="services__navbar">
             <div class="services__navbar-inner">
-              <h2 class="section-title">Сервисы</h2>
+              <h2 class="section-title" data-i18n="services">Сервисы</h2>
               <div class="services__navs">
                 <a
                   class="services__nav button primary active"
                   href="#card-1"
                   onclick="scrollToCard(0)"
+                  data-i18n="traffic aggregator"
                 >
                   Агрегатор трафика
                 </a>
@@ -58,6 +62,7 @@
                   class="services__nav button primary"
                   href="#card-2"
                   onclick="scrollToCard(1)"
+                  data-i18n="P2P Platform"
                 >
                   P2P Платформа
                 </a>
@@ -65,6 +70,7 @@
                   class="services__nav button primary"
                   href="#card-3"
                   onclick="scrollToCard(2)"
+                  data-i18n="Crypto-exchanger"
                 >
                   Крипто-обменник
                 </a>
@@ -72,6 +78,7 @@
                   class="services__nav button primary"
                   href="#card-4"
                   onclick="scrollToCard(3)"
+                  data-i18n="Turnkey"
                 >
                   Под ключ
                 </a>
@@ -101,31 +108,53 @@
 
                 <div class="card__header">
                   <div class="card__advantages">
-                    <div class="card__advantage">White Label</div>
-                    <div class="card__advantage">ПРОДАЖА КОДА</div>
+                    <div class="card__advantage" data-i18n="white-label">
+                      White Label
+                    </div>
+                    <div class="card__advantage" data-i18n="selling the code">
+                      ПРОДАЖА КОДА
+                    </div>
                   </div>
                 </div>
 
                 <div class="card__content">
-                  <h4 class="card__title">Агрегатор трафика</h4>
+                  <h4 class="card__title" data-i18n="traffic aggregator">
+                    Агрегатор трафика
+                  </h4>
 
                   <ul class="card__parameters">
-                    <li class="card__parameter">
+                    <li
+                      class="card__parameter"
+                      data-i18n="flexible routing between providers"
+                    >
                       Гибкая маршрутизация между провайдерами
                     </li>
-                    <li class="card__parameter">
+                    <li
+                      class="card__parameter"
+                      data-i18n="multicurrency and global reach"
+                    >
                       Мультивалютность и глобальный охват
                     </li>
-                    <li class="card__parameter">Риал-тайм аналитика</li>
-                    <li class="card__parameter">Полностью автоматизирован</li>
+                    <li class="card__parameter" data-i18n="real-time analytics">
+                      Риал-тайм аналитика
+                    </li>
+                    <li class="card__parameter" data-i18n="fully automated">
+                      Полностью автоматизирован
+                    </li>
                   </ul>
                 </div>
 
                 <div class="card__footer">
-                  <p class="card__footer-description">Запуск за 7 дней</p>
+                  <p
+                    class="card__footer-description"
+                    data-i18n="launch in 7 days"
+                  >
+                    Запуск за 7 дней
+                  </p>
                   <button
                     class="card__footer-button button primary"
                     onclick="scrollToBlock(event, 'footer')"
+                    data-i18n="contact-us"
                   >
                     Связаться с нами
                   </button>
@@ -146,44 +175,79 @@
 
                 <div class="card__header">
                   <div class="card__advantages">
-                    <div class="card__advantage">White Label</div>
-                    <div class="card__advantage">ПРОДАЖА КОДА</div>
+                    <div class="card__advantage" data-i18n="white-label">
+                      White Label
+                    </div>
+                    <div class="card__advantage" data-i18n="selling the code">
+                      ПРОДАЖА КОДА
+                    </div>
                   </div>
                 </div>
 
                 <div class="card__content">
-                  <h4 class="card__title">Процессинговая платформа P2P</h4>
+                  <h4 class="card__title" data-i18n="card-2-title">
+                    Процессинговая платформа P2P
+                  </h4>
 
                   <ul class="card__parameters">
-                    <li class="card__parameter">
+                    <li
+                      class="card__parameter"
+                      data-i18n="accepting and withdrawing funds worldwide"
+                    >
                       Прием и вывод средств по всему миру
                     </li>
-                    <li class="card__parameter">
+                    <li
+                      class="card__parameter"
+                      data-i18n="real-time statistics and anti-fraud protection"
+                    >
                       Риал-тайм статистика и антифрод защита
                     </li>
-                    <li class="card__parameter">Кастомизируемый интерфейс</li>
-                    <li class="card__parameter">
+                    <li
+                      class="card__parameter"
+                      data-i18n="customizable interface"
+                    >
+                      Кастомизируемый интерфейс
+                    </li>
+                    <li
+                      class="card__parameter"
+                      data-i18n="automation with high conversion rate (SMSHUB)"
+                    >
                       Автоматика с высокой конверсия (SMSHUB)
                     </li>
 
-                    <li class="card__parameter">
+                    <li
+                      class="card__parameter"
+                      data-i18n="integration with crypto wallets"
+                    >
                       Интеграция с крипто-кошельками
                     </li>
-                    <li class="card__parameter">Telegram-инфраструктура</li>
-                    <li class="card__parameter">
+                    <li
+                      class="card__parameter"
+                      data-i18n="telegram infrastructure"
+                    >
+                      Telegram-инфраструктура
+                    </li>
+                    <li
+                      class="card__parameter"
+                      data-i18n="trader Rating System"
+                    >
                       Рейтинговая система трейдеров
                     </li>
-                    <li class="card__parameter">
+                    <li
+                      class="card__parameter"
+                      data-i18n="flexible customization of banking details (farms/bays/bt/ct)"
+                    >
                       Гибкая настройка реквизитов (фермы/заливы/бт/кт)
                     </li>
                   </ul>
                 </div>
 
                 <div class="card__footer">
-                  <p class="card__footer-description">Запуск за 7 дней</p>
+                  <p class="card__footer-description" data-i18n="launch in 7 day">Запуск за 7 дней</p>
                   <button
                     class="card__footer-button button primary"
                     onclick="scrollToBlock(event, 'footer')"
+                    data-i18n="contact-us"
                   >
                     Связаться с нами
                   </button>
@@ -210,8 +274,8 @@
 
                 <div class="card__header">
                   <div class="card__advantages">
-                    <div class="card__advantage">White Label</div>
-                    <p class="card__header-description">
+                    <div class="card__advantage" data-i18n="white-label">White Label</div>
+                    <p class="card__header-description" data-i18n="cryptocurrency Exchange with Intuitive UX">
                       Обмен криптовалют с интуитивным UX
                     </p>
                   </div>
@@ -221,32 +285,33 @@
                   <h4 class="card__title">Crypto Exchange (Web + Tg-Bot)</h4>
 
                   <ul class="card__parameters">
-                    <li class="card__parameter">
+                    <li class="card__parameter" data-i18n="instant course calculation via calculator">
                       Мгновенный расчет курса через калькулятор
                     </li>
-                    <li class="card__parameter">
+                    <li class="card__parameter" data-i18n="telegram bot with the registration of applications in the chat">
                       Telegram-бот с оформлением заявок в чате
                     </li>
-                    <li class="card__parameter">
+                    <li class="card__parameter" data-i18n="automatic or semi-automatic processing">
                       Автоматическая или полуавтоматическая обработка
                     </li>
-                    <li class="card__parameter">
+                    <li class="card__parameter" data-i18n="email, Telegram, and push notifications">
                       Уведомления на email, Telegram, push
                     </li>
-                    <li class="card__parameter">
+                    <li class="card__parameter" data-i18n="multicurrency and custom directions">
                       Мультивалютность и кастомные направления
                     </li>
-                    <li class="card__parameter">
+                    <li class="card__parameter" data-i18n="integration with the crypto Wallet API">
                       Интеграция с API криптокошельков
                     </li>
                   </ul>
                 </div>
 
                 <div class="card__footer">
-                  <p class="card__footer-description">Запуск за 7 дней</p>
+                  <p class="card__footer-description" data-i18n="launch in 7 days">Запуск за 7 дней</p>
                   <button
                     class="card__footer-button button primary"
                     onclick="scrollToBlock(event, 'footer')"
+                    data-i18n="contact-us"
                   >
                     Связаться с нами
                   </button>
@@ -267,25 +332,26 @@
 
                 <div class="card__header">
                   <div class="card__advantages">
-                    <div class="card__advantage">РАЗРАБОТКА НА ЗАКАЗ</div>
+                    <div class="card__advantage" data-i18n="custom development">РАЗРАБОТКА НА ЗАКАЗ</div>
                   </div>
                 </div>
 
                 <div class="card__content">
-                  <h4 class="card__title">
+                  <h4 class="card__title" data-i18n="card-4-title">
                     Ваш проект: от концепции до запуска — быстро и без лишних
                     вопросов
                   </h4>
                 </div>
 
                 <div class="card__footer">
-                  <p class="card__footer-description--small">
+                  <p class="card__footer-description--small" data-i18n="focus on business, and we'll take care of all the technical stuff">
                     Сфокусируйтесь на бизнесе, а мы возьмем на себя всё
                     техническое
                   </p>
                   <button
                     class="card__footer-button button primary"
                     onclick="scrollToBlock(event, 'footer')"
+                    data-i18n="contact-us"
                   >
                     Связаться с нами
                   </button>
@@ -299,12 +365,12 @@
           <div class="container">
             <div class="footer__inner">
               <div class="footer__content">
-                <h2 class="footer__title">Остались вопросы или хотите демо?</h2>
-                <p class="footer__description">
+                <h2 class="footer__title" data-i18n="footer-title">Остались вопросы или хотите демо?</h2>
+                <p class="footer__description" data-i18n="footer-description">
                   Свяжитесь с нами — мы подскажем, покажем и запустим ваш
                   продукт
                 </p>
-                <a class="footer__tg" href="#">
+                <a class="footer__tg" href="#" data-i18n="footer-tg">
                   Перейти в телеграм канал
                   <svg
                     width="40"
@@ -351,6 +417,7 @@
                 <button
                   class="callback-form__button button primary"
                   type="submit"
+                  data-i18n="contact-us"
                 >
                   Связаться с нами
                 </button>

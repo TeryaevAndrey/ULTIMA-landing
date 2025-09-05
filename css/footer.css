@@ -61,13 +61,14 @@
 
 .footer__big-text {
   font-family: var(--font-family-fourth);
-  font-size: 18vw;
+  font-size: 16.5rem;
   font-weight: 800;
   line-height: 120%;
   text-transform: uppercase;
   text-align: center;
   color: var(--base-content-100);
   margin-top: 108px;
+  width: 100%;
 }
 
 .footer__big-text sup {
