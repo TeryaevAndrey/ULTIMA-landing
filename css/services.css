@@ -1,12 +1,11 @@
 .services {
   margin-top: 76px;
   background-color: var(--base-100);
-  margin-top: -100svh;
+
   position: relative;
 }
 
 .services__container {
-  position: relative;
   padding-bottom: 20px;
 }
 
