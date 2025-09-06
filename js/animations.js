@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 gsap.from(".hero__content", {
   y: 70,
   opacity: 0,
@@ -16,19 +14,22 @@ gsap.from(".header", {
 });
 
 window.addEventListener("load", () => {
-  const dmGsapCards = document.querySelectorAll(".card");
+  const dmGsapCards = document.querySelectorAll(".dm-gsap-cards");
   const dmCardsLength = dmGsapCards.length;
 
   dmGsapCards.forEach((dmElement, index) => {
-    const dmCardsOffset = -130 * (index + 1);
+    const dmCardsOffset =
+      window.innerHeight <= 768 ? -30 * (index + 1) : -130 * (index + 1);
     const scaleValue = (100 - dmCardsLength) / 100 + (index + 1) * 0.01; // Incremental scale value
 
     gsap.to(dmElement, {
       scrollTrigger: {
         trigger: dmElement,
-        endTrigger: ".end",
-        start: `0%+=${dmCardsOffset}px -4%`,
-        end: "0% 15%",
+        endTrigger: ".dm-gsap-cards-end",
+        start: `0%+=${dmCardsOffset}px ${
+          window.innerHeight <= 768 ? "8.5%" : "-4%"
+        }`,
+        end: "0% -15%",
         pin: true,
         scrub: true,
         markers: false,
