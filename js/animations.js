@@ -17,18 +17,39 @@ window.addEventListener("load", () => {
   const dmGsapCards = document.querySelectorAll(".dm-gsap-cards");
   const dmCardsLength = dmGsapCards.length;
 
+  const getStart = () => {
+    if (window.innerWidth <= 768) {
+      return "17.5%";
+    }
+
+    if (window.innerWidth > 1024 && window.innerHeight <= 768) {
+      return "8.5%";
+    }
+
+    return "-4%";
+  };
+
   dmGsapCards.forEach((dmElement, index) => {
-    const dmCardsOffset =
-      window.innerHeight <= 768 ? -30 * (index + 1) : -130 * (index + 1);
+    const getCardsOffset = () => {
+      if (window.innerWidth <= 768) {
+        return -100 * (index + 1);
+      }
+
+      if (window.innerHeight <= 768) {
+        return -30 * (index + 1);
+      }
+
+      return -130 * (index + 1);
+    };
+
+    const dmCardsOffset = getCardsOffset();
     const scaleValue = (100 - dmCardsLength) / 100 + (index + 1) * 0.01; // Incremental scale value
 
     gsap.to(dmElement, {
       scrollTrigger: {
         trigger: dmElement,
         endTrigger: ".dm-gsap-cards-end",
-        start: `0%+=${dmCardsOffset}px ${
-          window.innerHeight <= 768 ? "8.5%" : "-4%"
-        }`,
+        start: `0%+=${dmCardsOffset}px ${getStart()}`,
         end: "0% -15%",
         pin: true,
         scrub: true,
@@ -59,3 +80,7 @@ window.addEventListener("load", () => {
     }
   });
 });
+
+setTimeout(() => {
+  ScrollTrigger.refresh();
+}, 100);

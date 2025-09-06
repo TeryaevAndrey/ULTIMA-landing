@@ -20,7 +20,7 @@
   padding: 20px 0;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 15;
   background-color: var(--base-100);
 }
 
@@ -77,6 +77,26 @@
 @media (max-width: 768px) {
   .services__container {
     padding-bottom: 10px;
+  }
+
+  .services__navs {
+    overflow-x: auto;
+    width: 100%;
+    /* Для WebKit (Chrome, Safari, Edge) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+  }
+
+  .services__navs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .services__list {
+    padding-bottom: 360px;
+  }
+
+  .services__navbar-inner {
+    align-items: start;
   }
 }
 
