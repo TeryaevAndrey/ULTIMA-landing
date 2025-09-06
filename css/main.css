@@ -116,4 +116,8 @@ body {
   .form-error {
     font-size: 12px;
   }
+
+  .section-title {
+    text-align: left;
+  }
 }

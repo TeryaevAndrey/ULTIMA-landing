@@ -92,17 +92,44 @@
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding-top: 42px;
+    padding-bottom: 10px;
+  }
+
   .footer__inner {
     flex-direction: column;
     justify-content: start;
   }
 
   .footer__big-text {
-    font-size: 76px;
+    font-size: 4.5rem;
     margin-top: 140px;
   }
 
   .footer__big-text sup {
     font-size: 18px;
+    margin: 0;
+    margin-left: -15px;
+    line-height: 2.5;
+  }
+
+  .footer__tg {
+    margin-top: 40px;
+  }
+
+  .footer__description {
+    margin-top: 40px;
+  }
+
+  .footer__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+  }
+
+  .footer__big-text--small {
+    display: none;
   }
 }

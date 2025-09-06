@@ -87,7 +87,7 @@
           </div>
           <div class="services__container">
             <div class="services__list">
-              <div class="card" id="card-1">
+              <div class="dm-gsap-cards card card-1" id="card-1">
                 <picture class="card__bg">
                   <source
                     class="card__bg"
@@ -176,7 +176,7 @@
                   </button>
                 </div>
               </div>
-              <div class="card orange-card" id="card-2">
+              <div class="dm-gsap-cards card card-2 orange-card" id="card-2">
                 <object
                   class="card__bg"
                   data="./assets/images/card-2-bg.svg"
@@ -284,7 +284,7 @@
                   </button>
                 </div>
               </div>
-              <div class="card" id="card-3">
+              <div class="dm-gsap-cards card card-3" id="card-3">
                 <picture class="card__bg">
                   <source
                     class="card__bg"
@@ -392,7 +392,10 @@
                   </button>
                 </div>
               </div>
-              <div class="card orange-card" id="card-4">
+              <div
+                class="dm-gsap-cards card card-4 orange-card dm-gsap-cards-end"
+                id="card-4"
+              >
                 <picture class="card__bg">
                   <source
                     class="card__bg"
@@ -446,81 +449,82 @@
             </div>
           </div>
         </div>
-
-        <footer class="footer" id="footer">
-          <div class="container">
-            <div class="footer__inner">
-              <div class="footer__content">
-                <h2 class="footer__title" data-i18n="footer-title">
-                  Остались вопросы или хотите демо?
-                </h2>
-                <p class="footer__description" data-i18n="footer-description">
-                  Свяжитесь с нами — мы подскажем, покажем и запустим ваш
-                  продукт
-                </p>
-                <a class="footer__tg" href="#">
-                  <span data-i18n="footer-tg">Перейти в телеграм канал</span>
-                  <svg
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M26.583 0C31.3286 0 33.7017 0.000326821 35.5078 0.938477C37.0298 1.72911 38.2709 2.97016 39.0615 4.49219C39.9997 6.29832 40 8.67136 40 13.417V26.583C40 31.3286 39.9997 33.7017 39.0615 35.5078C38.2709 37.0298 37.0298 38.2709 35.5078 39.0615C33.7017 39.9997 31.3286 40 26.583 40H13.417C8.67136 40 6.29832 39.9997 4.49219 39.0615C2.97016 38.2709 1.72911 37.0298 0.938477 35.5078C0.000326821 33.7017 0 31.3286 0 26.583V13.417C0 8.67136 0.000326886 6.29832 0.938477 4.49219C1.72911 2.97016 2.97016 1.72911 4.49219 0.938477C6.29832 0.000326886 8.67136 0 13.417 0H26.583ZM32.2842 11.3027C32.7041 9.6194 31.6419 8.8553 30.542 9.35449L6.46094 18.6436C4.81731 19.303 4.82684 20.2191 6.16113 20.6279L12.167 22.5029L14.4648 29.5488C14.7442 30.32 14.6072 30.626 15.417 30.626C16.0416 30.6259 16.319 30.3409 16.667 30.001C16.8883 29.7844 18.2026 28.5067 19.6699 27.0801L25.917 31.6953C27.0666 32.3295 27.8973 32.0013 28.1836 30.6279L32.2842 11.3027ZM26.6475 13.5312C27.3231 13.1215 27.9425 13.3416 27.4346 13.793L15.8418 24.252L15.3906 29.0664L13.1094 22.0723L26.6475 13.5312Z"
-                      fill="white"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <form class="callback-form">
-                <div class="callback-form__inputs">
-                  <div class="form-control">
-                    <input
-                      class="callback-form__input input primary"
-                      placeholder="Имя"
-                      name="name"
-                    />
-                    <p class="form-error"></p>
-                  </div>
-                  <div class="form-control">
-                    <input
-                      class="callback-form__input input primary"
-                      placeholder="Телефон"
-                      type="tel"
-                      name="tel"
-                    />
-                    <p class="form-error"></p>
-                  </div>
-                  <div class="form-control">
-                    <input
-                      class="callback-form__input input primary"
-                      placeholder="Почта или телеграм"
-                      name="email"
-                    />
-                    <p class="form-error"></p>
-                  </div>
-                </div>
-                <button
-                  class="callback-form__button button primary"
-                  type="submit"
-                  data-i18n="contact-us"
-                >
-                  Связаться с нами
-                </button>
-              </form>
-            </div>
-            <p class="footer__big-text">ULTIMA<sup>®</sup></p>
-          </div>
-        </footer>
       </section>
     </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__content">
+            <h2 class="footer__title" data-i18n="footer-title">
+              Остались вопросы или хотите демо?
+            </h2>
+            <p class="footer__description" data-i18n="footer-description">
+              Свяжитесь с нами — мы подскажем, покажем и запустим ваш продукт
+            </p>
+            <a class="footer__tg" href="#">
+              <span data-i18n="footer-tg">Перейти в телеграм канал</span>
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.583 0C31.3286 0 33.7017 0.000326821 35.5078 0.938477C37.0298 1.72911 38.2709 2.97016 39.0615 4.49219C39.9997 6.29832 40 8.67136 40 13.417V26.583C40 31.3286 39.9997 33.7017 39.0615 35.5078C38.2709 37.0298 37.0298 38.2709 35.5078 39.0615C33.7017 39.9997 31.3286 40 26.583 40H13.417C8.67136 40 6.29832 39.9997 4.49219 39.0615C2.97016 38.2709 1.72911 37.0298 0.938477 35.5078C0.000326821 33.7017 0 31.3286 0 26.583V13.417C0 8.67136 0.000326886 6.29832 0.938477 4.49219C1.72911 2.97016 2.97016 1.72911 4.49219 0.938477C6.29832 0.000326886 8.67136 0 13.417 0H26.583ZM32.2842 11.3027C32.7041 9.6194 31.6419 8.8553 30.542 9.35449L6.46094 18.6436C4.81731 19.303 4.82684 20.2191 6.16113 20.6279L12.167 22.5029L14.4648 29.5488C14.7442 30.32 14.6072 30.626 15.417 30.626C16.0416 30.6259 16.319 30.3409 16.667 30.001C16.8883 29.7844 18.2026 28.5067 19.6699 27.0801L25.917 31.6953C27.0666 32.3295 27.8973 32.0013 28.1836 30.6279L32.2842 11.3027ZM26.6475 13.5312C27.3231 13.1215 27.9425 13.3416 27.4346 13.793L15.8418 24.252L15.3906 29.0664L13.1094 22.0723L26.6475 13.5312Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
+          </div>
+          <form class="callback-form">
+            <div class="callback-form__inputs">
+              <div class="form-control">
+                <input
+                  class="callback-form__input input primary"
+                  placeholder="Имя"
+                  name="name"
+                />
+                <p class="form-error"></p>
+              </div>
+              <div class="form-control">
+                <input
+                  class="callback-form__input input primary"
+                  placeholder="Телефон"
+                  type="tel"
+                  name="tel"
+                />
+                <p class="form-error"></p>
+              </div>
+              <div class="form-control">
+                <input
+                  class="callback-form__input input primary"
+                  placeholder="Почта или телеграм"
+                  name="email"
+                />
+                <p class="form-error"></p>
+              </div>
+            </div>
+            <button
+              class="callback-form__button button primary"
+              type="submit"
+              data-i18n="contact-us"
+            >
+              Связаться с нами
+            </button>
+          </form>
+        </div>
+        <p class="footer__big-text">ULTIMA<sup>®</sup></p>
+      </div>
+    </footer>
 
     <script src="./js/app.js"></script>
     <script src="./js/cards.js"></script>
     <script src="./js/languages.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
     <script src="./js/animations.js"></script>
   </body>
 </html>

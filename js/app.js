@@ -1,3 +1,11 @@
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual"; 
+}
+
 const form = document.querySelector(".callback-form");
 const formButton = form.querySelector(".callback-form__button");
 
@@ -13,7 +21,7 @@ form.addEventListener("submit", async (e) => {
   controls.forEach((control) => {
     const input = control.querySelector("input");
     const errorEl = control.querySelector(".form-error");
-    errorEl.textContent = ""; // очищаем предыдущие ошибки
+    errorEl.textContent = ""; 
 
     if (!input.value.trim()) {
       errorEl.textContent = "Поле обязательно для заполнения";
@@ -97,6 +105,6 @@ controls.forEach((control) => {
   const errorEl = control.querySelector(".form-error");
 
   input.addEventListener("input", () => {
-    errorEl.textContent = ""; 
+    errorEl.textContent = "";
   });
 });

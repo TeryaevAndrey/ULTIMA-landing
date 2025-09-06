@@ -3,10 +3,10 @@
   background-color: var(--base-100);
   margin-top: -100svh;
   position: relative;
+  z-index: 20;
 }
 
 .services__container {
-  position: relative;
   padding-bottom: 20px;
 }
 
@@ -14,13 +14,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 640px;
 }
 
 .services__navbar {
   padding: 20px 0;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 15;
   background-color: var(--base-100);
 }
 
@@ -78,10 +79,35 @@
   .services__container {
     padding-bottom: 10px;
   }
+
+  .services__navs {
+    overflow-x: auto;
+    width: 100%;
+    /* Для WebKit (Chrome, Safari, Edge) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE и Edge */
+  }
+
+  .services__navs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .services__list {
+    padding-bottom: 590px;
+  }
+
+  .services__navbar-inner {
+    align-items: start;
+  }
 }
 
 @media (min-width: 1024px) and (max-height: 768px) {
   .services__nav.button {
     padding: 16px;
   }
+
+  .services__list {
+    padding-bottom: 290px;
+  }
 }
+
