@@ -3,6 +3,7 @@
   background-color: var(--base-100);
   margin-top: -100svh;
   position: relative;
+  z-index: 20;
 }
 
 .services__container {
@@ -92,7 +93,7 @@
   }
 
   .services__list {
-    padding-bottom: 360px;
+    padding-bottom: 590px;
   }
 
   .services__navbar-inner {
@@ -109,3 +110,4 @@
     padding-bottom: 290px;
   }
 }
+

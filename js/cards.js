@@ -24,5 +24,3 @@ window.addEventListener("scroll", () => {
     navLinks[currentIndex].classList.add("active");
   }
 });
-
-function scrollToCard(index) {}

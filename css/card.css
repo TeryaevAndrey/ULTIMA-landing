@@ -314,6 +314,7 @@
     padding: 30px;
     border-radius: 60px;
     justify-content: start;
+    height: 755px;
   }
 
   .card__advantage {
@@ -350,6 +351,7 @@
     font-weight: 500;
     text-align: left;
     width: 100%;
+    margin-top: 34px;
   }
 
   .card__footer-button.button {
@@ -378,4 +380,5 @@
     margin-left: 10px;
     font-size: 12px;
   }
+
 }
