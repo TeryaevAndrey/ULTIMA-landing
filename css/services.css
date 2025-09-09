@@ -1,7 +1,7 @@
 .services {
   margin-top: 76px;
   background-color: var(--base-100);
-  margin-top: -100svh;
+  margin-top: -100dvh;
   position: relative;
   z-index: 20;
 }

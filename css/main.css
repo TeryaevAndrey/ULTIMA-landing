@@ -85,11 +85,11 @@ body {
 }
 
 .language-button:active {
-  scale: 0.95;
+  transform: scale(0.95);
 }
 
 .started {
-  height: 200svh;
+  height: 200dvh;
   position: relative;
 }
 
