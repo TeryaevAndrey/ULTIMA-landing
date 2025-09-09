@@ -6,7 +6,7 @@
 .callback-form__inputs {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 .callback-form__button {

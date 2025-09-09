@@ -136,3 +136,13 @@
     font-size: 18.5vw;
   }
 }
+
+@media(min-width: 1460px) {
+  .footer__big-text {
+    font-size: 265px;
+  }
+
+  .footer__big-text sup {
+    font-size: 60px;
+  }
+}

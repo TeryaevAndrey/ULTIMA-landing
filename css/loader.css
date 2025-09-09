@@ -1,0 +1,42 @@
+.page-loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--base-100);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  width: 100vw;
+  transition: all 0.2s ease;
+}
+
+.loader {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--orange-100);
+  position: relative;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 0;
+  background: #fff;
+  transform: rotate(0deg) translate(30px);
+  animation: rotate 1s ease infinite;
+}
+.loader:after {
+  animation-delay: 0.5s;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg) translate(30px);
+  }
+}

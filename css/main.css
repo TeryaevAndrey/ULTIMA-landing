@@ -9,6 +9,7 @@
 @import "./card.css";
 @import "./footer.css";
 @import "./callback-form.css";
+@import "./loader.css";
 
 html {
   scroll-behavior: smooth;
@@ -41,6 +42,11 @@ body {
   text-transform: uppercase;
   color: var(--base-content-100);
   letter-spacing: -0.04em;
+}
+
+.logo__image {
+  width: 60px;
+  height: 32px;
 }
 
 .logo sup {
@@ -120,8 +126,20 @@ body {
   .section-title {
     text-align: left;
   }
-  
+
   .form-error {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo span,
+  .logo sup {
+    display: none;
+  }
+
+  .logo__image {
+    width: 83px;
+    height: 44px;
   }
 }

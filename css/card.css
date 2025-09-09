@@ -9,6 +9,8 @@
   height: 640px;
   overflow: hidden;
   max-height: 75dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 .card::before {
@@ -194,6 +196,8 @@
   gap: 60px;
   position: relative;
   z-index: 10;
+  padding-top: 34px;
+  margin-top: auto
 }
 
 .card__footer-button.button {
@@ -301,7 +305,7 @@
 
   .card__title {
     font-size: 24px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
   }
 
   .card__content {
@@ -310,6 +314,12 @@
 
   .card__parameters {
     row-gap: 16px;
+  }
+
+  .card__footer {
+    padding-top: 0;
+    align-items: center;
+    margin-top: auto;
   }
 
   .card__footer-description {
@@ -328,6 +338,11 @@
   .card.card-3 .card__image {
     max-width: 70%;
     right: 5%;
+  }
+
+  .card__footer-button.button {
+    height: auto;
+    padding: 10px 32px;
   }
 }
 
