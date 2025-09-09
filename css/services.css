@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 640px;
+  padding-bottom: 330px;
 }
 
 .services__navbar {
@@ -51,6 +51,8 @@
   border-radius: 20px;
   border: 1px solid transparent;
   min-width: 168px;
+  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .services__nav.active {
@@ -80,6 +82,10 @@
     padding-bottom: 10px;
   }
 
+  .services__navbar-inner {
+    gap: 26px
+  }
+
   .services__navs {
     overflow-x: auto;
     width: 100%;
@@ -92,8 +98,13 @@
     display: none; /* Chrome, Safari, Opera */
   }
 
+  .services__nav.button {
+    line-height: 1;
+    font-size: 15px;
+  }
+
   .services__list {
-    padding-bottom: 590px;
+    padding-bottom: 350px;
   }
 
   .services__navbar-inner {
