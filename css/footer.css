@@ -65,7 +65,7 @@
 
 .footer__big-text {
   font-family: var(--font-family-fourth);
-  font-size: 16.5rem;
+  font-size: 19vw;
   font-weight: 800;
   line-height: 120%;
   text-transform: uppercase;
@@ -76,9 +76,9 @@
 }
 
 .footer__big-text sup {
-  font-size: 60px;
+  font-size: 5vw;
   vertical-align: top;
-  line-height: 1.5;
+  line-height: 2.5;
   margin-left: -60px;
 }
 
@@ -103,12 +103,10 @@
   }
 
   .footer__big-text {
-    font-size: 4.5rem;
     margin-top: 140px;
   }
 
   .footer__big-text sup {
-    font-size: 18px;
     margin: 0;
     margin-left: -15px;
     line-height: 2.5;
@@ -131,5 +129,16 @@
 
   .footer__big-text--small {
     display: none;
+  }
+
+  .footer__big-text {
+    font-size: 18.5vw;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+  .footer__big-text sup {
+    line-height: 2.5;
+    margin-left: -36px;
   }
 }

@@ -112,12 +112,16 @@ body {
   margin-top: 10px;
 }
 
-@media (max-width: 768px) {
-  .form-error {
-    font-size: 12px;
+@media (max-width: 1024px) {
+  .services__navbar-inner {
+    align-items: start;
   }
 
   .section-title {
     text-align: left;
+  }
+  
+  .form-error {
+    font-size: 12px;
   }
 }

@@ -122,3 +122,12 @@
   }
 }
 
+@media(min-width: 768px) and (max-width: 1024px) {
+  .services__list {
+    padding-bottom: 350px;
+  }
+
+  .services__navbar {
+    padding-top: 40px;
+  }
+}

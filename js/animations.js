@@ -53,12 +53,14 @@ window.addEventListener("load", () => {
 
   const getStart = () => {
     if (window.innerWidth <= 768) return "15%";
+    if(window.innerWidth > 768 && window.innerWidth < 1024) return '14%';
     if (window.innerWidth > 1024 && window.innerHeight <= 768) return "8.5%";
     return "6%";
   };
 
   const getCardsOffset = (index) => {
     if (window.innerWidth <= 768) return -20 * (index + 1);
+    if(window.innerWidth > 768 && window.innerWidth < 1024) return -18 * (index + 1);
     return -30 * (index + 1);
   };
 
