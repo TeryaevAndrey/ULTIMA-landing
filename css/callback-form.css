@@ -28,5 +28,6 @@
 @media (max-width: 768px) {
   .callback-form {
     margin-top: 60px;
+    max-width: 100%;
   }
 }
