@@ -1,83 +1,61 @@
 window.addEventListener("load", () => {
-  gsap.from(".hero__content", {
-    y: 70,
-    opacity: 0,
-    duration: 1.35,
-    delay: 0.8,
-    ease: "power2.out",
-  });
-
-  gsap.from(".header", {
-    y: -150,
-    opacity: 0,
-    duration: 1.35,
-    ease: "power2.out",
-  });
-
   const dmGsapCards = gsap.utils.toArray(".dm-gsap-cards");
+
   if (!dmGsapCards.length) return;
 
   const getStart = () => {
-    const w = window.innerWidth, h = window.innerHeight;
-    if (w <= 768) return "20%";
-    if (w < 1024) return "14%";
-    if (w > 1024 && h <= 768) return "8.5%";
+    if (window.innerWidth <= 768) return "15%";
+    if (window.innerWidth > 768 && window.innerWidth < 1024) return "14%";
+    if (window.innerWidth > 1024 && window.innerHeight <= 768) return "8.5%";
     return "6%";
   };
 
-  const getCardsOffset = (i) => {
-    const w = window.innerWidth;
-    if (w <= 768) return -20 * (i + 1);
-    if (w < 1024) return -18 * (i + 1);
-    return -30 * (i + 1);
+  const getCardsOffset = (index) => {
+    if (window.innerWidth <= 768) return -20 * (index + 1);
+    if (window.innerWidth > 768 && window.innerWidth < 1024)
+      return -18 * (index + 1);
+    return -30 * (index + 1);
   };
 
-  const scaleStep = -0.02;
-  dmGsapCards.forEach((el) => gsap.set(el, { scale: 1 }));
+  const baseScaleStep = 0.01; // базовый шаг для масштаба
 
-  dmGsapCards.forEach((dmElement, i) => {
+  dmGsapCards.forEach((dmElement, index) => {
     gsap.to(dmElement, {
       scrollTrigger: {
-        id: `card-${i}`,
+        id: `card-${index}`,
         trigger: dmElement,
         endTrigger: ".dm-gsap-cards-end",
-        start: `0%+=${getCardsOffset(i)}px ${getStart()}`,
+        start: `0%+=${getCardsOffset(index)}px ${getStart()}`,
         end: "0% -15%",
         pin: true,
         scrub: true,
       },
     });
 
-    if (i > 0) {
-      gsap.to(dmGsapCards[i - 1], {
-        scale: 1 + scaleStep,
-        transformOrigin: "top center",
-        scrollTrigger: {
-          trigger: dmElement,
-          start: "top bottom",
-          end: "top top",
-          scrub: true,
-        },
-      });
+    // Проверяем, если это не последняя карточка, применяем уменьшение масштаба
+    if (index !== dmGsapCards.length - 1) {
+      const scaleStep = baseScaleStep * (dmGsapCards.length - 1 - index); // обратный порядок уменьшения масштаба
+
+      gsap.fromTo(
+        dmElement,
+        { scale: 1 }, // начальный масштаб
+        {
+          scale: 1 - scaleStep, // конечный масштаб
+          transformOrigin: "top center",
+          scrollTrigger: {
+            trigger: dmElement,
+            start: "top+=50% bottom-=20%", // масштаб начинается при наложении
+            end: "top+=50% top", // масштаб заканчивается, когда карточка полностью наложилась
+            scrub: true,
+          },
+        }
+      );
     }
   });
 
-  window.addEventListener("resize", ScrollTrigger.refresh);
+  window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+  });
+
   ScrollTrigger.refresh();
 });
-
-function scrollToCard(index) {
-  const dmGsapCards = gsap.utils.toArray(".dm-gsap-cards");
-  const target = dmGsapCards[index];
-  if (!target) return;
-
-  const trigger = ScrollTrigger.getById(`card-${index}`);
-  const scrollY = trigger ? trigger.start : target.getBoundingClientRect().top + window.scrollY;
-
-  gsap.to(window, {
-    duration: trigger ? 0.05 : 0.1,
-    ease: "power2.out",
-    scrollTo: scrollY,
-    onUpdate: ScrollTrigger.update,
-  });
-}
