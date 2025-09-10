@@ -108,15 +108,11 @@
 
 @media (max-width: 1024px) {
   .hero__inner {
-    padding: 40px 0;
+padding-bottom: 40px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero__inner {
-    padding-top: 10px;
-  }
-
   .hero__content {
     flex-direction: column;
     justify-content: end;
