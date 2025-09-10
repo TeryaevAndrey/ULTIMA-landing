@@ -1,20 +1,32 @@
 .card {
-  padding: 2.5rem;
-  border-radius: 3.75rem;
+  padding: 40px;
+  border-radius: 60px;
   background-color: var(--base-100);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100svh - env(safe-area-inset-bottom, 0px));
-  max-height: 75svh;
+  height: 640px;
   overflow: hidden;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dm-gsap-cards {
+  position: sticky; /* для GSAP set sticky */
+  top: 0; /* начальная точка фиксации, можно динамически менять через JS */
+  transform-origin: top center;
+  will-change: transform;
+  display: block;
 }
 
 .card::before {
   content: "";
   position: absolute;
-  inset: 0 0 auto 0;
+  left: 0;
+  top: 0;
+  right: 0;
   width: 100%;
   height: 40%;
   background: linear-gradient(
@@ -22,40 +34,8 @@
     rgba(5, 5, 5, 0.3) 0%,
     rgba(5, 5, 5, 0.8) 100%
   );
-  -webkit-filter: blur(1.25rem);
-  filter: blur(1.25rem);
+  filter: blur(20px);
   z-index: 0;
-}
-
-.card.orange-card::before {
-  background: linear-gradient(180deg, #131313 0%, #000 100%);
-  -webkit-filter: blur(2.5rem);
-  filter: blur(2.5rem);
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 30%;
-  background: linear-gradient(
-    0deg,
-    rgba(5, 5, 5, 0.6) 0%,
-    rgba(5, 5, 5, 0.6) 100%
-  );
-  -webkit-filter: blur(0.75rem);
-  filter: blur(0.75rem);
-  z-index: 5;
-}
-
-.card.orange-card::after {
-  background: linear-gradient(
-    360deg,
-    rgba(255, 123, 34, 0.15) 0%,
-    rgba(255, 123, 34, 0.06) 100%
-  );
-  -webkit-filter: blur(1.25rem);
-  filter: blur(1.25rem);
 }
 
 .card__header {
@@ -70,72 +50,111 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.25rem;
+  gap: 4px;
 }
 
 .card__advantage {
-  border-radius: 1.25rem;
-  padding: 1.25rem;
+  position: relative;
+  border-radius: 20px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3.125rem;
+  height: 50px;
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(2.5rem);
-  backdrop-filter: blur(2.5rem);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   outline: 1px solid rgba(255, 255, 255, 0.2);
   text-transform: uppercase;
-  font-size: 0.875rem;
+  line-height: 1;
+  font-size: 14px;
   font-weight: 500;
+  text-wrap: nowrap;
   white-space: nowrap;
 }
 
 .card__content {
-  margin-top: 2.5rem;
+  margin-top: 40px;
   z-index: 10;
   position: relative;
 }
 
 .card__title {
   font-family: var(--font-family-third);
-  font-size: 3rem;
+  font-size: 48px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 120%;
   letter-spacing: 0.02em;
   background: linear-gradient(90deg, #fff 0%, #5b6468 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
-  margin-bottom: 4.0625rem;
+  margin-bottom: 65px;
   width: 100%;
 }
 
 .card.card-1 {
   z-index: 10;
 }
+
 .card.card-2 {
   z-index: 11;
 }
+
 .card.card-3 {
   z-index: 12;
 }
+
 .card.card-4 {
   z-index: 13;
 }
 
 .card.card-1 .card__title {
-  max-width: 25.125rem;
+  max-width: 402px;
 }
+
 .card.card-2 .card__title {
-  max-width: 38.75rem;
+  max-width: 620px;
 }
+
 .card.card-3 .card__title {
-  max-width: 45rem;
+  max-width: 720px;
 }
+
 .card.card-4 .card__title {
-  max-width: 60.625rem;
+  max-width: 970px;
+}
+
+.card.orange-card::before {
+  background: linear-gradient(180deg, #131313 0%, #000 100%);
+  filter: blur(40px);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(12px);
+  background: linear-gradient(
+    0deg,
+    rgba(5, 5, 5, 0.6) 0%,
+    rgba(5, 5, 5, 0.6) 100%
+  );
+  z-index: 5;
+  height: 30%;
+}
+
+.card.orange-card::after {
+  background: linear-gradient(
+    360deg,
+    rgba(255, 123, 34, 0.15) 0%,
+    rgba(255, 123, 34, 0.06) 100%
+  );
+  height: 30%;
+  filter: blur(20px);
 }
 
 .orange-card .card__title {
@@ -143,7 +162,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
 .card__bg {
@@ -151,8 +169,12 @@
   inset: 0;
   object-fit: cover;
   object-position: center;
+}
+
+.card__bg img {
   width: 100%;
   height: 100%;
+  display: block;
 }
 
 .card.card-2 .card__bg {
@@ -165,61 +187,61 @@
   top: 0;
   bottom: 0;
   height: 100%;
-  max-width: 65rem;
+  max-width: 1040px;
   width: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .card.card-2 .card__image {
-  max-width: 40.6875rem;
+  max-width: 651px;
 }
+
 .card.card-3 .card__image {
-  max-width: 59.375rem;
+  max-width: 950px;
 }
 
 .card__footer {
   display: flex;
-  align-items: flex-end;
-  gap: 3.75rem;
+  align-items: end;
+  gap: 60px;
   position: relative;
   z-index: 10;
-  padding-top: 2.125rem;
+  padding-top: 34px;
   margin-top: auto;
 }
 
 .card__footer-button.button {
-  height: 3.625rem;
+  height: 58px;
   text-transform: none;
-  padding: 1.5rem 1.75rem;
+  padding: 24px 28px;
 }
 
 .card.orange-card .card__footer-button.button {
   background-color: rgba(255, 95, 32, 0.2);
-  -webkit-backdrop-filter: blur(2.5rem);
-  backdrop-filter: blur(2.5rem);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
 }
 
 .card__parameters {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem 0;
-  max-width: 51.5625rem;
+  gap: 20px;
+  max-width: 825px;
   width: 100%;
+  column-gap: 0px;
 }
 
 .card__parameter {
   list-style: disc;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 140%;
   color: rgba(255, 255, 255, 0.8);
-  margin-left: 0.75rem;
+  margin-left: 12px;
 }
 
 .card__parameter::marker {
   color: var(--green-100);
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 .orange-card .card__parameter::marker {
@@ -228,15 +250,14 @@
 
 .card__footer-description {
   font-family: var(--font-family-third);
-  font-size: 1.75rem;
+  font-size: 28px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 120%;
   letter-spacing: 0.02em;
   background: linear-gradient(90deg, #fff 0%, #5b6468 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
 .card.orange-card .card__footer-description {
@@ -244,7 +265,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
 .card.card-1 .card__parameters {
@@ -253,16 +273,19 @@
 
 .card__header-description {
   font-family: var(--font-family-first);
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 140%;
   color: var(--base-content-100);
   opacity: 0.6;
 }
 
 .card__video-wrapper {
   position: absolute;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   opacity: 0.4;
 }
 
@@ -273,104 +296,127 @@
   object-position: top center;
 }
 
-/* Адаптивность и поддержка iPhone */
 @media (max-width: 1024px) {
   .card {
-    padding: 1.875rem;
-    border-radius: 3.75rem;
+    padding: 30px;
+    border-radius: 60px;
   }
+
   .card__content {
-    margin-top: 2.125rem;
+    margin-top: 34px;
   }
 }
 
 @media (min-width: 900px) and (max-height: 768px) {
   .card {
-    height: 25rem;
+    height: 400px;
   }
+
   .card__title {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
+
   .card__content {
-    margin-top: 1.75rem;
+    margin-top: 28px;
   }
+
   .card__parameters {
-    row-gap: 1rem;
+    row-gap: 16px;
   }
+
   .card__footer {
     padding-top: 0;
     align-items: center;
+    margin-top: auto;
   }
+
   .card__footer-description {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
+
   .card .card__image {
     max-width: 70%;
   }
+
   .card.card-2 .card__image {
     max-width: 60%;
     right: 3%;
   }
+
   .card.card-3 .card__image {
     max-width: 70%;
     right: 5%;
   }
+
   .card__footer-button.button {
     height: auto;
-    padding: 0.625rem 2rem;
+    padding: 10px 32px;
   }
 }
 
 @media (max-width: 768px) {
   .card {
-    padding: 1.875rem;
-    border-radius: 3.75rem;
-    justify-content: flex-start;
-    height: 47.1875rem;
-    max-height: 65vh;
+    padding: 30px;
+    border-radius: 60px;
+    justify-content: start;
+    height: 755px;
   }
+
   .card__advantage {
-    padding: 1rem 1.25rem;
-    border-radius: 0.875rem;
-    font-size: 0.625rem;
-    height: 2.4375rem;
+    padding: 16px 20px;
+    border-radius: 14px;
+    font-size: 10px;
+    height: 39px;
   }
+
   .card__content {
-    margin-top: 2.125rem;
+    margin-top: 34px;
   }
+
   .card__title {
-    font-size: 1.5rem;
-    margin-bottom: 2.125rem;
+    font-size: 24px;
+    margin-bottom: 34px;
   }
+
   .card__parameters {
-    gap: 0.625rem;
+    gap: 10px;
     grid-template-columns: 1fr;
   }
+
   .card__parameter {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
+
   .card__footer {
-    height: 25rem;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 0.75rem;
-    align-items: flex-start;
+    gap: 12px;
+    align-items: start;
+    padding-top: 0;
+    margin-top: unset;
+    flex-grow: 1;
   }
+
   .card__footer-description {
-    font-size: 1.125rem;
+    font-size: 18px;
+    font-weight: 500;
     text-align: left;
     width: 100%;
-    margin-top: 1.25rem;
+    margin-top: 20px;
   }
+
   .card__footer-button.button {
     width: 100%;
   }
+
   .card__advantages {
     flex-wrap: nowrap;
   }
+
   .card__image {
-    height: 25rem;
+    height: 400px;
     top: unset;
     bottom: 0;
     left: 0;
@@ -378,24 +424,21 @@
     object-fit: cover;
     object-position: center center;
   }
-  .card__header-description {
-    margin-left: 0.625rem;
-    font-size: 0.75rem;
+
+  .card__title {
+    margin-bottom: 26px;
   }
+
+  .card__header-description {
+    margin-left: 10px;
+    font-size: 12px;
+  }
+
   .card-2 .card__parameter:nth-last-child(-n + 3) {
     display: none;
   }
+
   .card-3 .card__parameter:last-child {
     display: none;
-  }
-}
-
-/* iOS Safe Area */
-@supports (padding: max(0px)) {
-  .card {
-    padding-bottom: max(2.5rem, env(safe-area-inset-bottom));
-    padding-top: max(2.5rem, env(safe-area-inset-top));
-    padding-left: max(2.5rem, env(safe-area-inset-left));
-    padding-right: max(2.5rem, env(safe-area-inset-right));
   }
 }
