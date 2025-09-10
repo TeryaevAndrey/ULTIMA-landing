@@ -1,0 +1,2 @@
+let cards=document.querySelectorAll(".card"),navLinks=document.querySelectorAll(".services__nav"),cardsTops=[...cards].map(e=>e.getBoundingClientRect().top);window.addEventListener("scroll",()=>{let e=null,n=window.innerHeight/2;cards.forEach((t,a)=>{let c=t.getBoundingClientRect();c.top<=n&&c.bottom>=n&&(e=a)}),navLinks.forEach(e=>e.classList.remove("active")),null!==e&&navLinks[e]&&navLinks[e].classList.add("active")});
+//# sourceMappingURL=ultima-landing.c5f1c120.js.map

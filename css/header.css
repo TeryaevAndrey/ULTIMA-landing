@@ -16,3 +16,8 @@
   gap: 20px;
 }
 
+@media(max-width: 768px) {
+  .header {
+    padding-top: 10px;
+  }
+}

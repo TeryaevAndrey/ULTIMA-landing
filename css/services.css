@@ -1,7 +1,7 @@
 .services {
   margin-top: 76px;
   background-color: var(--base-100);
-  margin-top: -100svh;
+  margin-top: -100dvh;
   position: relative;
   z-index: 20;
 }
@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-bottom: 340px;
+
 }
 
 .services__navbar {
@@ -74,6 +74,7 @@
   .services__navbar-inner {
     flex-direction: column;
     justify-content: start;
+    gap: 20px;
   }
 }
 
@@ -103,10 +104,6 @@
     font-size: 15px;
   }
 
-  .services__list {
-    padding-bottom: 350px;
-  }
-
   .services__navbar-inner {
     align-items: start;
   }
@@ -117,17 +114,12 @@
     padding: 16px;
   }
 
-  .services__list {
-    padding-bottom: 290px;
-  }
 }
 
 @media(min-width: 768px) and (max-width: 1024px) {
-  .services__list {
-    padding-bottom: 350px;
-  }
 
   .services__navbar {
-    padding-top: 40px;
+    padding-top: 20px;
   }
 }
+

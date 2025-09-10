@@ -1,70 +1,100 @@
+/* Helvetica Neue Thin 100 */
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 100;
-  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Thin.otf");
+  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Thin.woff2") format("woff2"),
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Thin.woff") format("woff");
+  font-display: swap;
 }
 
+/* Helvetica Neue Light 300 */
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 300;
-  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Light.otf");
+  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Light.woff2") format("woff2"),
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Light.woff") format("woff");
+  font-display: swap;
 }
 
+/* Helvetica Neue Regular 400 */
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Roman.otf");
+  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Roman.woff2") format("woff2"),
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Roman.woff") format("woff");
+  font-display: swap;
 }
 
+/* Helvetica Neue Medium 500 */
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 500;
-  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Medium.otf");
+  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff2") format("woff2"),
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff") format("woff");
+  font-display: swap;
 }
 
+/* Helvetica Neue Bold 700 */
 @font-face {
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 700;
-  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Bold.otf");
+  src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Bold.woff2") format("woff2"),
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Bold.woff") format("woff");
+  font-display: swap;
 }
 
+
+/* Inter Regular 400 */
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../assets/fonts/inter/Inter_24pt-Regular.ttf");
+  src: url("../assets/fonts/inter/Inter_24pt-Regular.woff2") format("woff2"),
+       url("../assets/fonts/inter/Inter_24pt-Regular.woff") format("woff");
+  font-display: swap;
 }
 
+/* Inter Medium 500 */
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url("../assets/fonts/inter/Inter_24pt-Medium.ttf");
+  src: url("../assets/fonts/inter/Inter_24pt-Medium.woff2") format("woff2"),
+       url("../assets/fonts/inter/Inter_24pt-Medium.woff") format("woff");
+  font-display: swap;
 }
+
 
 @font-face {
   font-family: "Akira Expanded";
   font-style: normal;
   font-weight: 800;
-  src: url("../assets/fonts/akira-expanded/Akira-Expanded-Demo.otf");
+  src: url("../assets/fonts/akira-expanded/Akira-Expanded-Demo.woff2")
+      format("woff2"),
+    url("../assets/fonts/akira-expanded/Akira-Expanded-Demo.woff")
+      format("woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Druk Wide Cyr";
   font-style: normal;
   font-weight: 500;
-  src: url("../assets/fonts/druk-wide-cyr/Druk-Wide-Cyr.woff2") format("woff2"),
-    url("../assets/fonts/druk-wide-cyr/Druk-Wide-Cyr.ttf") format("truetype");
+  src: url("../assets/fonts/druk-wide-cyr/Druk-Wide-Cyr.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "TT Travels";
   font-style: normal;
   font-weight: 600;
-  src: url("../assets/fonts/tt-travels/TT-Travels-Next-Trial-DemiBold.ttf");
+  src: url("../assets/fonts/tt-travels/TT-Travels-Next-Trial-DemiBold.woff2")
+      format("woff2"),
+    url("../assets/fonts/tt-travels/TT-Travels-Next-Trial-DemiBold.woff")
+      format("woff");
+  font-display: swap;
 }
