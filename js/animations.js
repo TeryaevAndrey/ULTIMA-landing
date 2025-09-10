@@ -5,18 +5,25 @@ window.addEventListener("load", () => {
   const header = document.querySelector(".services__navbar");
   const headerHeight = header.clientHeight;
   const topStep = window.innerWidth < 768 ? 10 : 20;
-  const finalScales = [0.9, 0.93, 0.96, 1]; // конечные масштабы карточек
+  const finalScales =
+    window.innerWidth < 768 ? [0.95, 0.97, 0.985, 1] : [0.9, 0.93, 0.96, 1];
+  const isMobile = window.innerWidth < 768;
 
   dmGsapCards.forEach((card, index) => {
     card.style.willChange = "transform";
     const topValue = headerHeight + topStep * index;
-    gsap.set(card, { position: "sticky", top: topValue + "px" });
+    gsap.set(card, {
+      position: "sticky",
+      top: topValue + "px",
+      force3D: true,
+      z: 0,
+    });
 
     const nextCard = dmGsapCards[index + 1];
     if (nextCard) {
       // Определяем диапазон скролла следующей карточки
-      const startOffset = "top+=70% bottom"; // когда 70% следующей карточки видны
-      const endOffset = "top top"; // когда верх следующей карточки достигнет верха экрана
+      const startOffset = isMobile ? "top+=50% bottom" : "top+=70% bottom";
+      const endOffset = "top top";
 
       gsap.fromTo(
         card,
@@ -24,11 +31,14 @@ window.addEventListener("load", () => {
         {
           scale: finalScales[index],
           transformOrigin: "top center",
+          force3D: true,
+          z: 0,
           scrollTrigger: {
             trigger: nextCard,
             start: startOffset,
             end: endOffset,
-            scrub: true, // плавная анимация
+            scrub: isMobile ? 0.5 : 1, // плавная анимация
+            id: `card-${index}`,
           },
         }
       );
@@ -63,7 +73,6 @@ function scrollToCard(index) {
 
   if (!target) return;
 
-  // Находим ScrollTrigger текущей карточки
   const trigger = ScrollTrigger.getById(`card-${index}`);
 
   if (trigger) {
@@ -71,7 +80,11 @@ function scrollToCard(index) {
       duration: 0.05,
       ease: "power2.out",
       scrollTo: {
-        y: trigger.start, // точная стартовая позиция ScrollTrigger
+        y:
+          trigger.start -
+          (window.innerWidth <= 768
+            ? window.innerHeight * 0.45
+            : window.innerHeight * 0.2), 
         autoKill: false,
       },
       onUpdate: () => ScrollTrigger.update(),

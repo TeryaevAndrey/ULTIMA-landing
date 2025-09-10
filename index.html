@@ -119,38 +119,34 @@
             <div class="services__navbar-inner">
               <h2 class="section-title" data-i18n="services">Сервисы</h2>
               <div class="services__navs">
-                <a
+                <button
                   class="services__nav button primary active"
-                  href="#card-1"
                   onclick="scrollToCard(0)"
                   data-i18n="traffic aggregator"
                 >
                   Агрегатор трафика
-                </a>
-                <a
+                </button>
+                <button
                   class="services__nav button primary"
-                  href="#card-2"
                   onclick="scrollToCard(1)"
                   data-i18n="P2P Platform"
                 >
                   P2P Платформа
-                </a>
-                <a
+                </button>
+                <button
                   class="services__nav button primary"
-                  href="#card-3"
                   onclick="scrollToCard(2)"
                   data-i18n="Crypto-exchanger"
                 >
                   Крипто-обменник
-                </a>
-                <a
+                </button>
+                <button
                   class="services__nav button primary"
-                  href="#card-4"
                   onclick="scrollToCard(3)"
                   data-i18n="Turnkey"
                 >
                   Под ключ
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -551,6 +547,9 @@
 
     <!-- GSAP ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- GSAP ScrollToPlugin -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script src="./js/animations.js" defer></script>
     <script src="./js/loader.js" defer></script>
   </body>
