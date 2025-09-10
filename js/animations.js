@@ -20,6 +20,9 @@ window.addEventListener("load", () => {
   const baseScaleStep = 0.01; // базовый шаг для масштаба
 
   dmGsapCards.forEach((dmElement, index) => {
+    // Добавляем will-change для оптимизации рендеринга
+    dmElement.style.willChange = "transform";
+
     gsap.to(dmElement, {
       scrollTrigger: {
         id: `card-${index}`,
@@ -29,6 +32,7 @@ window.addEventListener("load", () => {
         end: "0% -15%",
         pin: true,
         scrub: true,
+        invalidateOnRefresh: true, // оптимизация для плавности анимации
       },
     });
 
@@ -53,9 +57,13 @@ window.addEventListener("load", () => {
     }
   });
 
+  // Добавляем обработчик для обновления ScrollTrigger при изменении размера окна
   window.addEventListener("resize", () => {
-    ScrollTrigger.refresh();
+    ScrollTrigger.refresh(true); // минимизация лишних пересчетов
   });
+
+  // Устанавливаем сглаживание лагов для GSAP
+  gsap.ticker.lagSmoothing(1000, 16);
 
   ScrollTrigger.refresh();
 });
