@@ -1,71 +1,43 @@
 window.addEventListener("load", () => {
   const dmGsapCards = gsap.utils.toArray(".dm-gsap-cards");
-
   if (!dmGsapCards.length) return;
 
-  const getStart = () => {
-    if (window.innerWidth <= 768) return "138px";
-    if (window.innerWidth > 768 && window.innerWidth < 1024) return "14%";
-    if (window.innerWidth > 1024 && window.innerHeight <= 768) return "8.5%";
-    return "6%";
-  };
+  const header = document.querySelector(".services__navbar");
+  const headerHeight = header.clientHeight;
+  const topStep = window.innerWidth < 768 ? 10 : 20;
+  const finalScales = [0.9, 0.93, 0.96, 1]; // конечные масштабы карточек
 
-  const getCardsOffset = (index) => {
-    if (window.innerWidth <= 768) return -20 * (index + 1);
-    if (window.innerWidth > 768 && window.innerWidth < 1024)
-      return -18 * (index + 1);
-    return -30 * (index + 1);
-  };
+  dmGsapCards.forEach((card, index) => {
+    card.style.willChange = "transform";
+    const topValue = headerHeight + topStep * index;
+    gsap.set(card, { position: "sticky", top: topValue + "px" });
 
-  const baseScaleStep = 0.01; // базовый шаг для масштаба
-
-  dmGsapCards.forEach((dmElement, index) => {
-    // Добавляем will-change для оптимизации рендеринга
-    dmElement.style.willChange = "transform";
-
-    gsap.to(dmElement, {
-      scrollTrigger: {
-        id: `card-${index}`,
-        trigger: dmElement,
-        endTrigger: ".dm-gsap-cards-end",
-        start: `0%+=${getCardsOffset(index)}px ${getStart()}`,
-        end: "0% top-=15%",
-        pin: true,
-        scrub: 1,
-        invalidateOnRefresh: true, // оптимизация для плавности анимации
-      },
-    });
-
-    // Проверяем, если это не последняя карточка, применяем уменьшение масштаба
-    if (index !== dmGsapCards.length - 1) {
-      const scaleStep = baseScaleStep * (dmGsapCards.length - 1 - index); // обратный порядок уменьшения масштаба
+    const nextCard = dmGsapCards[index + 1];
+    if (nextCard) {
+      // Определяем диапазон скролла следующей карточки
+      const startOffset = "top+=70% bottom"; // когда 70% следующей карточки видны
+      const endOffset = "top top"; // когда верх следующей карточки достигнет верха экрана
 
       gsap.fromTo(
-        dmElement,
-        { scale: 1 }, // начальный масштаб
+        card,
+        { scale: 1 },
         {
-          scale: 1 - scaleStep, // конечный масштаб
+          scale: finalScales[index],
           transformOrigin: "top center",
           scrollTrigger: {
-            trigger: dmElement,
-            start: "top+=50% bottom-=20%", // масштаб начинается при наложении
-            end: "top+=50% top", // масштаб заканчивается, когда карточка полностью наложилась
-            scrub: 1,
+            trigger: nextCard,
+            start: startOffset,
+            end: endOffset,
+            scrub: true, // плавная анимация
           },
         }
       );
     }
   });
 
-  // Добавляем обработчик для обновления ScrollTrigger при изменении размера окна
   window.addEventListener("resize", () => {
-    ScrollTrigger.refresh(true); // минимизация лишних пересчетов
+    ScrollTrigger.refresh(true);
   });
-
-  // Устанавливаем сглаживание лагов для GSAP
-  gsap.ticker.lagSmoothing(1000, 16);
-
-  ScrollTrigger.refresh();
 });
 
 window.addEventListener("load", () => {

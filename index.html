@@ -3,8 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ULTIMA</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="./css/button.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/input.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/header.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/hero.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/services.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/card.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/footer.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/callback-form.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/loader.css"
+      media="print"
+      onload="this.media='all'"
+    />
   </head>
   <body>
     <main class="main">
@@ -27,7 +84,7 @@
               <div class="header__inner">
                 <a class="logo" href="/">
                   <object
-                  class="logo__image"
+                    class="logo__image"
                     data="./assets/icons/logo.svg"
                     type="image/svg+xml"
                   ></object>
@@ -102,36 +159,20 @@
               <div class="dm-gsap-cards card card-1" id="card-1">
                 <picture class="card__bg">
                   <source
-                    class="card__bg"
                     srcset="./assets/images/card-1-bg.webp"
                     type="image/webp"
                   />
                   <source
-                    class="card__bg"
                     srcset="./assets/images/card-1-bg.png"
                     type="image/png"
                   />
-                  <img
-                    class="card__bg"
-                    src="./assets/images/card-1-bg.png"
-                    alt="Card-1"
-                  />
+                  <img src="./assets/images/card-1-bg.png" alt="Card-1" />
                 </picture>
 
                 <picture class="card__image">
-                  <source
-                    class="card__image"
-                    srcset="./assets/images/card-1.webp"
-                  />
-                  <source
-                    class="card__image"
-                    srcset="./assets/images/card-1.png"
-                  />
-                  <img
-                    class="card__image"
-                    src="./assets/images/card-1.png"
-                    alt="Card-1.1"
-                  />
+                  <source srcset="./assets/images/card-1.webp" />
+                  <source srcset="./assets/images/card-1.png" />
+                  <img src="./assets/images/card-1.png" alt="Card-1.1" />
                 </picture>
 
                 <div class="card__header">
@@ -194,19 +235,9 @@
                 ></object>
 
                 <picture class="card__image">
-                  <source
-                    class="card__image"
-                    srcset="./assets/images/card-2.webp"
-                  />
-                  <source
-                    class="card__image"
-                    srcset="./assets/images/card-2.png"
-                  />
-                  <img
-                    class="card__image"
-                    src="./assets/images/card-2.png"
-                    alt="Card-2"
-                  />
+                  <source srcset="./assets/images/card-2.webp" />
+                  <source srcset="./assets/images/card-2.png" />
+                  <img src="./assets/images/card-2.png" alt="Card-2" />
                 </picture>
 
                 <div class="card__header">
@@ -295,20 +326,14 @@
               <div class="dm-gsap-cards card card-3" id="card-3">
                 <picture class="card__bg">
                   <source
-                    class="card__bg"
                     srcset="./assets/images/card-3-bg.webp"
                     type="image/webp"
                   />
                   <source
-                    class="card__bg"
                     srcset="./assets/images/card-3-bg.png"
                     type="image/png"
                   />
-                  <img
-                    class="card__bg"
-                    src="./assets/images/card-3-bg.png"
-                    alt="Card-3"
-                  />
+                  <img src="./assets/images/card-3-bg.png" alt="Card-3" />
                 </picture>
 
                 <picture class="card__image">
@@ -402,24 +427,6 @@
                 class="dm-gsap-cards card card-4 orange-card dm-gsap-cards-end"
                 id="card-4"
               >
-                <!-- <picture class="card__bg">
-                  <source
-                    class="card__bg"
-                    srcset="./assets/images/card-4-bg.webp"
-                    type="image/webp"
-                  />
-                  <source
-                    class="card__bg"
-                    srcset="./assets/images/card-4-bg.png"
-                    type="image/png"
-                  />
-                  <img
-                    class="card__bg"
-                    src="./assets/images/card-4-bg.png"
-                    alt="Card-4"
-                  />
-                </picture> -->
-
                 <div class="card__video-wrapper">
                   <video
                     class="card__video"
@@ -534,15 +541,17 @@
       </div>
     </footer>
 
-    <script src="./js/app.js"></script>
-    <script src="./js/callback-form.js"></script>
-    <script src="./js/cards.js"></script>
-    <script src="./js/languages.js"></script>
-    <script src="./js/maskPhone.js"></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/callback-form.js" defer></script>
+    <script src="./js/cards.js" defer></script>
+    <script src="./js/languages.js" defer></script>
+    <script src="./js/maskPhone.js" defer></script>
+    <!-- GSAP Core -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <!-- GSAP ScrollTrigger -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
-    <script src="./js/animations.js"></script>
-    <script src="./js/loader.js"></script>
+    <script src="./js/animations.js" defer></script>
+    <script src="./js/loader.js" defer></script>
   </body>
 </html>

@@ -37,8 +37,7 @@
   font-style: normal;
   font-weight: 500;
   src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff2") format("woff2"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff") format("woff"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Medium.otf") format("opentype");
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Medium.woff") format("woff");
   font-display: swap;
 }
 
@@ -48,8 +47,7 @@
   font-style: normal;
   font-weight: 700;
   src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Bold.woff2") format("woff2"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Bold.woff") format("woff"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Bold.otf") format("opentype");
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Bold.woff") format("woff");
   font-display: swap;
 }
 
@@ -60,8 +58,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/inter/Inter_24pt-Regular.woff2") format("woff2"),
-       url("../assets/fonts/inter/Inter_24pt-Regular.woff") format("woff"),
-       url("../assets/fonts/inter/Inter_24pt-Regular.ttf") format("truetype");
+       url("../assets/fonts/inter/Inter_24pt-Regular.woff") format("woff");
   font-display: swap;
 }
 
@@ -71,8 +68,7 @@
   font-style: normal;
   font-weight: 500;
   src: url("../assets/fonts/inter/Inter_24pt-Medium.woff2") format("woff2"),
-       url("../assets/fonts/inter/Inter_24pt-Medium.woff") format("woff"),
-       url("../assets/fonts/inter/Inter_24pt-Medium.ttf") format("truetype");
+       url("../assets/fonts/inter/Inter_24pt-Medium.woff") format("woff");
   font-display: swap;
 }
 
@@ -84,9 +80,7 @@
   src: url("../assets/fonts/akira-expanded/Akira-Expanded-Demo.woff2")
       format("woff2"),
     url("../assets/fonts/akira-expanded/Akira-Expanded-Demo.woff")
-      format("woff"),
-    url("../assets/fonts/akira-expanded/Akira-Expanded-Demo.otf")
-      format("opentype");
+      format("woff");
   font-display: swap;
 }
 
@@ -94,8 +88,7 @@
   font-family: "Druk Wide Cyr";
   font-style: normal;
   font-weight: 500;
-  src: url("../assets/fonts/druk-wide-cyr/Druk-Wide-Cyr.woff2") format("woff2"),
-    url("../assets/fonts/druk-wide-cyr/Druk-Wide-Cyr.ttf") format("truetype");
+  src: url("../assets/fonts/druk-wide-cyr/Druk-Wide-Cyr.woff2") format("woff2");
 }
 
 @font-face {
@@ -105,8 +98,6 @@
   src: url("../assets/fonts/tt-travels/TT-Travels-Next-Trial-DemiBold.woff2")
       format("woff2"),
     url("../assets/fonts/tt-travels/TT-Travels-Next-Trial-DemiBold.woff")
-      format("woff"),
-    url("../assets/fonts/tt-travels/TT-Travels-Next-Trial-DemiBold.ttf")
-      format("truetype");
+      format("woff");
   font-display: swap;
 }
