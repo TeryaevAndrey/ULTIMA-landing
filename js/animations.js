@@ -29,9 +29,9 @@ window.addEventListener("load", () => {
         trigger: dmElement,
         endTrigger: ".dm-gsap-cards-end",
         start: `0%+=${getCardsOffset(index)}px ${getStart()}`,
-        end: "0% -15%",
+        end: "0% top-=15%",
         pin: true,
-        scrub: true,
+        scrub: 1,
         invalidateOnRefresh: true, // оптимизация для плавности анимации
       },
     });
@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
             trigger: dmElement,
             start: "top+=50% bottom-=20%", // масштаб начинается при наложении
             end: "top+=50% top", // масштаб заканчивается, когда карточка полностью наложилась
-            scrub: true,
+            scrub: 1,
           },
         }
       );
@@ -67,3 +67,51 @@ window.addEventListener("load", () => {
 
   ScrollTrigger.refresh();
 });
+
+window.addEventListener("load", () => {
+  gsap.from(".hero__content", {
+    y: 70,
+    opacity: 0,
+    duration: 1.35,
+    delay: 0.8,
+    ease: "power2.out",
+  });
+
+  gsap.from(".header", {
+    y: -150,
+    opacity: 0,
+    duration: 1.35,
+    ease: "power2.out",
+  });
+});
+
+function scrollToCard(index) {
+  const dmGsapCards = gsap.utils.toArray(".dm-gsap-cards");
+  const target = dmGsapCards[index];
+
+  if (!target) return;
+
+  // Находим ScrollTrigger текущей карточки
+  const trigger = ScrollTrigger.getById(`card-${index}`);
+
+  if (trigger) {
+    gsap.to(window, {
+      duration: 0.05,
+      ease: "power2.out",
+      scrollTo: {
+        y: trigger.start, // точная стартовая позиция ScrollTrigger
+        autoKill: false,
+      },
+      onUpdate: () => ScrollTrigger.update(),
+    });
+  } else {
+    // fallback: прокрутка по позиции элемента
+    const targetY = target.getBoundingClientRect().top + window.scrollY;
+    gsap.to(window, {
+      duration: 0.1,
+      ease: "power2.out",
+      scrollTo: targetY,
+      onUpdate: () => ScrollTrigger.update(),
+    });
+  }
+}
