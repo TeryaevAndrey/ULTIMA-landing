@@ -4,6 +4,7 @@ window.addEventListener("load", () => {
   if (loader) {
     setTimeout(() => {
       loader.style.opacity = 0;
+      loader.style.zIndex = -1000;
       startAnimations();
     }, 2000);
 
