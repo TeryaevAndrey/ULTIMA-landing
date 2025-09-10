@@ -9,7 +9,6 @@
   height: calc(100svh - env(safe-area-inset-bottom, 0px));
   max-height: 75svh;
   overflow: hidden;
-  box-sizing: border-box;
 }
 
 .card::before {
@@ -329,7 +328,7 @@
     border-radius: 3.75rem;
     justify-content: flex-start;
     height: 47.1875rem;
-    max-height: 70vh;
+    max-height: 65vh;
   }
   .card__advantage {
     padding: 1rem 1.25rem;

@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   if (!dmGsapCards.length) return;
 
   const getStart = () => {
-    if (window.innerWidth <= 768) return "15%";
+    if (window.innerWidth <= 768) return "138px";
     if (window.innerWidth > 768 && window.innerWidth < 1024) return "14%";
     if (window.innerWidth > 1024 && window.innerHeight <= 768) return "8.5%";
     return "6%";
