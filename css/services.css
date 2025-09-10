@@ -74,6 +74,7 @@
   .services__navbar-inner {
     flex-direction: column;
     justify-content: start;
+    gap: 20px;
   }
 }
 
@@ -118,7 +119,7 @@
 @media(min-width: 768px) and (max-width: 1024px) {
 
   .services__navbar {
-    padding-top: 40px;
+    padding-top: 20px;
   }
 }
 
