@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
   });
 });
 
-window.addEventListener("load", () => {
+const startAnimations = () => {
   gsap.from(".hero__content", {
     y: 70,
     opacity: 0,
@@ -65,7 +65,7 @@ window.addEventListener("load", () => {
     duration: 1.35,
     ease: "power2.out",
   });
-});
+};
 
 function scrollToCard(index) {
   const dmGsapCards = gsap.utils.toArray(".dm-gsap-cards");
@@ -84,7 +84,7 @@ function scrollToCard(index) {
           trigger.start -
           (window.innerWidth <= 768
             ? window.innerHeight * 0.45
-            : window.innerHeight * 0.2), 
+            : window.innerHeight * 0.2),
         autoKill: false,
       },
       onUpdate: () => ScrollTrigger.update(),

@@ -1,0 +1,4 @@
+-- СБОРКА ПРОЕКТА -- 
+
+npm install -g parcel
+parcel build index.html --public-url ./ 

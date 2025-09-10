@@ -1,0 +1,2 @@
+function scrollToBlock(o,t){o.preventDefault();let e=document.getElementById(t);e&&(window.scrollTo({top:e.getBoundingClientRect().top+window.scrollY-150,behavior:"smooth"}),history.pushState(null,"",`#${t}`))}window.addEventListener("load",()=>{window.scrollTo(0,0),"scrollRestoration"in history&&(history.scrollRestoration="manual")}),document.querySelectorAll(".form-control input").forEach(o=>{o.addEventListener("input",()=>{let t=o.closest(".form-control").querySelector(".form-error");t&&(t.textContent="")})});
+//# sourceMappingURL=ultima-landing.f3827ded.js.map

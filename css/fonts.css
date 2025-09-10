@@ -4,8 +4,7 @@
   font-style: normal;
   font-weight: 100;
   src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Thin.woff2") format("woff2"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Thin.woff") format("woff"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Thin.otf") format("opentype");
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Thin.woff") format("woff");
   font-display: swap;
 }
 
@@ -15,8 +14,7 @@
   font-style: normal;
   font-weight: 300;
   src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Light.woff2") format("woff2"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Light.woff") format("woff"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Light.otf") format("opentype");
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Light.woff") format("woff");
   font-display: swap;
 }
 
@@ -26,8 +24,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/helvetica-neue/HelveticaNeue-Roman.woff2") format("woff2"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Roman.woff") format("woff"),
-       url("../assets/fonts/helvetica-neue/HelveticaNeue-Roman.otf") format("opentype");
+       url("../assets/fonts/helvetica-neue/HelveticaNeue-Roman.woff") format("woff");
   font-display: swap;
 }
 
