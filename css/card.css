@@ -330,6 +330,20 @@
   }
 }
 
+@media(min-width: 900px) and (max-width: 1180px) {
+  .card-1 .card__image {
+    right: -15%;
+  }
+
+  .card-2 .card__image {
+    right: -8%;
+  }
+
+  .card-3 .card__image {
+    right: -8%;
+  }
+}
+
 @media (min-width: 900px) and (max-width: 1100px) and (max-height: 768px) {
   .card__title {
     font-size: 24px;
