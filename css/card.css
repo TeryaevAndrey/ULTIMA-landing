@@ -622,4 +622,12 @@
     left: 0;
     transform: translateX(0);
   }
+
+  .card.card-3 .card__image {
+    height: 75%;
+  }
+
+  .card.card-3::before {
+    height: 133%;
+  }
 }
