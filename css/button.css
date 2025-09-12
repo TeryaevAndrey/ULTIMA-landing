@@ -45,8 +45,14 @@
   outline-offset: 2px;
 }
 
+.button.primary span {
+  position: relative;
+  top: -2px;
+}
+
 @media (hover: none) {
   .button.primary:hover {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
 }
+
