@@ -30,4 +30,8 @@
     margin-top: 60px;
     max-width: 100%;
   }
+
+  .callback-form__button.button {
+    font-size: 14px;
+  }
 }

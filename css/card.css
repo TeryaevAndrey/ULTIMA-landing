@@ -393,6 +393,7 @@
     padding: 30px;
     border-radius: 60px;
     justify-content: start;
+    min-height: 755px;
     height: 755px;
   }
 
@@ -446,6 +447,10 @@
     margin-bottom: 34px;
   }
 
+  .card__parameters {
+    columns: 1;
+  }
+
   .card__parameter {
     font-size: 12px;
   }
@@ -466,15 +471,26 @@
     font-weight: 500;
     text-align: left;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 8px;
+  }
+
+  .card__parameter {
+    margin-bottom: 10px;
   }
 
   .card__footer-button.button {
     width: 100%;
   }
 
+  .card__footer-description--small {
+    margin-top: 40px;
+    font-weight: 300;
+    line-height: 125%;
+  }
+
   .card__advantages {
     flex-wrap: nowrap;
+    gap: 4px;
   }
 
   .card__image {
@@ -492,7 +508,6 @@
   }
 
   .card__header-description {
-    margin-left: 10px;
     font-size: 12px;
   }
 
@@ -529,6 +544,7 @@
     height: 100%;
     width: 100%;
   }
+  
 }
 
 @media(min-width: 720px) and (max-width: 900px) {
