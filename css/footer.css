@@ -4,11 +4,9 @@
   /* Fallback for older browsers */
   background-image: url("../assets/images/footer-bg.jpg");
   background-image: -webkit-image-set(
-    url("../assets/images/footer-bg.webp") type("image/webp"),
     url("../assets/images/footer-bg.jpg") type("image/jpeg")
   );
   background-image: image-set(
-    url("../assets/images/footer-bg.webp") type("image/webp"),
     url("../assets/images/footer-bg.jpg") type("image/jpeg")
   );
   background-repeat: no-repeat;
