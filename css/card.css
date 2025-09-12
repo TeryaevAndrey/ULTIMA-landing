@@ -319,6 +319,18 @@
   object-position: top center;
 }
 
+@media (max-width: 1350px) {
+  .card.card-3 .card__image {
+    right: -5%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .card.card-3 .card__image {
+    right: -8%;
+  }
+}
+
 @media (max-width: 1024px) {
   .card {
     padding: 30px;
@@ -328,9 +340,25 @@
   .card__content {
     margin-top: 34px;
   }
+
+  .card__parameter {
+    text-wrap: wrap;
+  }
 }
 
-@media(min-width: 900px) and (max-width: 1180px) {
+@media (max-width: 1023px) {
+  .card__image {
+    display: none;
+  }
+
+  .card-1 .card__image {
+    display: block;
+    right: -15%;
+    width: 95%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1180px) {
   .card-1 .card__image {
     right: -15%;
   }
@@ -365,7 +393,7 @@
   }
 
   .card .card__image {
-    max-width: 70%;
+    max-width: 80%;
   }
 
   .card.card-2 .card__image {
@@ -388,12 +416,21 @@
   }
 }
 
+@media (max-width: 900px) {
+  .card__parameters {
+    column-gap: 20px;
+  }
+
+  .card__parameter {
+    text-wrap: wrap;
+  }
+}
+
 @media (max-width: 768px) {
   .card {
     padding: 30px;
     border-radius: 60px;
     justify-content: start;
-    min-height: 755px;
     height: 755px;
   }
 
@@ -494,6 +531,7 @@
   }
 
   .card__image {
+    display: block;
     height: 400px;
     top: unset;
     bottom: 0;
@@ -520,8 +558,11 @@
   }
 
   .card.card-1 .card__image {
-    width: 100%;
+    width: 120%;
     height: 440px;
+    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .card.card-2 .card__image {
@@ -544,11 +585,41 @@
     height: 100%;
     width: 100%;
   }
-  
 }
 
-@media(min-width: 720px) and (max-width: 900px) {
-  .card__image {
-    display: none;
+@media (max-width: 620px) {
+  .card.card-1 .card__image {
+    right: 0;
+    height: 446px;
+    width: 140%;
+  }
+
+  .card.card-2 .card__image {
+    right: unset;
+    left: 50%;
+    transform: translateX(-34%);
+  }
+}
+
+@media (max-width: 500px) {
+  .card.card-2 .card__image {
+    left: 0;
+    right: 0;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 420px) {
+  .card.card-1 .card__image {
+    width: 170%;
+  }
+}
+
+@media (max-width: 380px) {
+  .card.card-1 .card__image {
+    height: 440px;
+    width: 100%;
+    left: 0;
+    transform: translateX(0);
   }
 }
