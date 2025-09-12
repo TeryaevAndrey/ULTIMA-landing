@@ -3,12 +3,6 @@
   background: #000 url("../assets/images/footer-bg.jpg") center center/cover no-repeat;
   /* Fallback for older browsers */
   background-image: url("../assets/images/footer-bg.jpg");
-  background-image: -webkit-image-set(
-    url("../assets/images/footer-bg.jpg") type("image/jpeg")
-  );
-  background-image: image-set(
-    url("../assets/images/footer-bg.jpg") type("image/jpeg")
-  );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
